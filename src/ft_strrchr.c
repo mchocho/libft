@@ -1,21 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strrchr.c                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/18 15:39:03 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/18 15:44:22 by mchocho          ###   ########.fr       */
+/*   Created: 2019/05/20 11:23:54 by mchocho           #+#    #+#             */
+/*   Updated: 2019/05/20 14:51:40 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strrchr (const char *s, int c) {
-    char *v = NULL;
+char *ft_strrchr(const char *s, int c) 
+{
+    int i;
+    int j;
+
+    i = 0;
+    j = -1;
     
-    while(*s++) {
-        if (*s == (char) c)
-            v = s;
+    while(s[i] != '\0') 
+	{
+        if (s[i] == c) 
+		{
+            j = i;
+        }
+        i++;
     }
-    return (v);
+	if (c == '\0') {
+		return ((char *)s + i);
+	} else if (j > -1) 
+	{
+        return ((char *)s + j);
+    } else {
+		return (NULL);
+	}
 }
