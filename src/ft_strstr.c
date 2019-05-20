@@ -6,12 +6,9 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:30:46 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/20 14:27:53 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/05/20 15:02:43 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <stdio.h>
 
 char *ft_strstr(const char *haystack, const char *needle)
 {
@@ -40,7 +37,7 @@ char *ft_strstr(const char *haystack, const char *needle)
 		k = -1;
 		i++;
 	}
-	if (!*needle) { //needle is empty
+	if (!*needle) {
 		return ((char *)haystack);
 	} else if (i == 0) {
 		return ((char *)(haystack + i));
