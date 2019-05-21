@@ -1,50 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 17:58:47 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/21 14:17:06 by mchocho          ###   ########.fr       */
+/*   Created: 2019/05/21 12:25:36 by mchocho           #+#    #+#             */
+/*   Updated: 2019/05/21 16:59:43 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <stdio.h>
 
-void ft_bzero(void *s, size_t n) {
-	unsigned char *str;
+void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+{
+	char *cpy;
+	char *val;
 	size_t i;
-	size_t j;
 
-	str = s;
+
+	cpy = (char *)dst;
+	val = (char *)src;
 	i = 0;
-	j = 0;
 
-	while (*str++) {
-		j++;
-	}
-	while(i < n) {
-		str[j--] = '\0';
+	while (i < n) {
+		cpy[i] = val[i];
 		i++;
 	}
-	return;// (s);
+
+	cpy[i] = '\0';
+	return (dst);
 }
-
-#include <string.h>
-
-int main() {
-	char *foo = "We think code rocks!"; 
-
-	//char *foo1 = "We think code rocks!";
-	
-	bzero(foo, 5);
-
-	//ft_bzero(foo, 5);
-
-	printf("Result should be: %s \n", foo);
-
-	//printf("Test returned: %s \n", foo1);
-
-	return 0;
-}
-
