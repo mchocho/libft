@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 17:21:21 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/26 17:41:32 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/05/27 09:49:28 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,8 @@
 char *ft_strcpy(char *dst, const char *src)
 {
 	int i;
-	int len;
-
-	len = 1;
-	i = 0;
-
-	while(src[i] != '\0') {
-		i++;
-		len++;
-	}
 
 	i = 0;
-	dst = (char *)malloc(len * sizeof(char *));
 
 	while (src[i] != '\0') {
 		dst[i] = src[i];
@@ -38,6 +28,7 @@ char *ft_strcpy(char *dst, const char *src)
 }
 
 #include <stdio.h>
+#include <string.h>
 
 int main() {
 
@@ -45,7 +36,7 @@ int main() {
 
 	char *foo = "Hello bitch!";
 
-	char *dst = "";
+	char dst[60] = "";
 
 	ft_strcpy(dst, foo);
 
