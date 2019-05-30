@@ -1,20 +1,19 @@
 #include <stdlib.h>
 
-char *ft_strncpy(char *dest, const char *src, size_t size)
+char *ft_strncpy(char *dst, const char *src, size_t size)
 {
     size_t i;
     
     i = 0;    
-    dest = (char *)(malloc((size + 1) * sizeof(char)));
     
     while (src[i] != '\0' && i < size)
     {
-        dest[i] = src[i];
+        dst[i] = src[i];
         i++;
     }
-    dest[i] = '\0';
+    dst[i] = '\0';
     
-    return (dest);
+    return (dst);
 }
 
 #include <stdio.h>
