@@ -12,39 +12,37 @@
 #include <stdio.h>
 
 void ft_bzero(void *s, size_t n) {
-	unsigned char *str;
+	char *str;
 	size_t i;
-	size_t j;
 
-	str = s;
+	str = (char *)s;
 	i = 0;
-	j = 0;
 
-	while (*str++) {
-		j++;
-	}
 	while(i < n) {
-		str[j--] = '\0';
+		*str = '\0';
 		i++;
+		str++;
 	}
-	return;// (s);
+	return;
 }
 
 #include <string.h>
 
 int main() {
-	char *foo = "We think code rocks!"; 
+	printf(" Testing ft_bzero\n--------------------------------\n");
 
-	//char *foo1 = "We think code rocks!";
-	
-	bzero(foo, 5);
+	char foo[50] = "We think code rocks!";
 
-	//ft_bzero(foo, 5);
+	char fubu[50] = "We think code rocks!";
+
+	bzero(foo + 13, 1);
+
+	ft_bzero(fubu + 13, 1);
 
 	printf("Result should be: %s \n", foo);
 
-	//printf("Test returned: %s \n", foo1);
+	printf("Test returned: %s \n", fubu);
 
-	return 0;
+	return (0);
 }
 
