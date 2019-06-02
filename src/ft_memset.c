@@ -14,17 +14,38 @@
 
 void *ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*str;
-	size_t		i;
+	char	*str;
+	size_t	i;
 
-	str = b;
+	str = (char *)b;
 	i = 0;
 
 	while (i < len)
 	{
-		str[i] = c;
+		*str = c;
 		i++;
+		str++;
 	}
 
 	return (b);
+}
+
+#include <string.h>
+
+int main() {
+	printf(" Testing ft_memset\n-----------------------------\n");
+
+	char foo[50] = "Hello world";
+
+	char fubu[50] = "Hello world";
+
+	memset(foo + 6, 'k', 6);
+
+	ft_memset(fubu + 6, 'k', 6);
+
+	printf("Result should be: %s\n", foo);
+
+	printf("Test returned: %s\n", fubu);
+
+	return 0;
 }
