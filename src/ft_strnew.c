@@ -14,11 +14,10 @@
 
 char *ft_strnew(size_t size)
 {
-	char *str = (char *)malloc(size);
-	if (!str)
-		return (NULL);
+	char *str = (char *)malloc(sizeof(char)*size);
+	if (!str) return (NULL);
 	else {
-		str[size] = '\0';
+		str[size + 1] = '\0';
 		return (str);
 	}
 }
@@ -31,7 +30,7 @@ int main() {
 
 	char *foo = "Hey girl! How u doin?";
 
-	foo = ft_strnew(2);
+	foo = ft_strnew(6);
 
 	printf("Result returned: %s\n", foo);
 
