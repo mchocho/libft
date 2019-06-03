@@ -6,22 +6,20 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 10:30:42 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/23 11:26:16 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/03 14:39:11 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize) {
+size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
 	size_t i;
 	size_t j;
 
 	i = 0;
 	j = 0;
 
-	while(dst[i] != '\0') {
-		i++;
-	}
+	while(dst[i] != '\0') i++;
 
 	while(src[j] != '\0' && j < dstsize) {
 		dst[i] = src[j];
@@ -42,19 +40,18 @@ int main() {
 
 	const char *fubu = " bitch!";
 
-	strlcat(foo, fubu, 15);
-	
+		
 
-	printf("Result should be: %s\n", foo);
+	printf("Result should be: %d\n", (int)strlcat(foo, fubu, 15) );
 
 
 	char foo2[50] = "Hello ";
 
 	char *fubu2 = "bitch!";
 
-	ft_strlcat(foo2, fubu2, 15);
+	//ft_strlcat(foo2, fubu2, 15);
 
-	printf("Test returned: %s\n", foo2);
+	printf("Test returned: %d\n", (int)ft_strlcat(foo2, fubu2, 15)/*foo2*/);
 
 	return (0);
 
