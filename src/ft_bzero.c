@@ -35,9 +35,9 @@ int main() {
 
 	char fubu[50] = "We think code rocks!";
 
-	bzero(foo + 13, 1);
+	bzero(foo + 5 , 6);
 
-	ft_bzero(fubu + 13, 1);
+	ft_bzero(fubu + 5, 6);
 
 	printf("Result should be: %s \n", foo);
 
