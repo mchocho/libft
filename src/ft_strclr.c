@@ -6,18 +6,16 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 18:42:26 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/03 18:54:04 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/05 17:04:50 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void ft_strclr(char *s)
 {
-	while(*s)
-	{
-		*s = '\0';
+	while(*s) {
+	   	*s = '\0';
 		s++;
 	}
-	return;
 }
 
 #include <stdio.h>
