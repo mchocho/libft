@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:52:16 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/10 14:27:55 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/10 17:41:07 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -17,7 +17,7 @@ void ft_putnbr(int n) {
 	char *result;
 	int temp;
 	int base;
-	int len;
+	//int len;
 	int i;
 
 	temp = n;
@@ -25,7 +25,8 @@ void ft_putnbr(int n) {
 	i = 0;
 
 	if (n == -2147483648 || n == 2147483647) {
-		result = (char *)malloc(sizeof(char) * 11);
+		temp = (n < 0) ? 11 : 10;
+		result = (char *)malloc(sizeof(char) * temp);
 		if (!result) return;
 		result = (n < 0) ? "-2147483648" : "2147483647";
 		while(*result) {
@@ -81,7 +82,7 @@ void ft_putnbr(int n) {
 	result = (char *)malloc(sizeof(char) * base);
 	if (!result) return;
 
-	len = base;
+	//len = base;
 
 	//Add null terminator
 	result[base] = '\0';
@@ -110,7 +111,7 @@ void ft_putnbr(int n) {
 int main() {
 	printf(" Testing ft_putnbr.c\n----------------------\n");
 
-	int i = 50000;
+	int i = 2147483647;
 
 	ft_putnbr(i);
 
