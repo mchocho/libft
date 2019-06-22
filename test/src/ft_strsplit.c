@@ -1,11 +1,39 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+static char *ft_strtoken(char *str, const char sep)
+{
+	while(*str) {
+		if (*str == sep)
+			*str = sep;
+		str++;
+	}
+	return (str);
+}
+
+
 char **ft_strsplit(char const *s, char c)
 {
 	char **result;
 	char *value;
-	int toggle;
+	//char *str;
+	int len;
+	//int k;
+
+	len = 0;
+	
+	while(s[len])
+		len++;
+
+	//str = (char *)s;
+	value = ft_strtoken((char *)s, c);
+
+	while (value != NULL) {
+		printf("%s\n", value);
+		value = ft_strtoken(NULL, c);
+	}
+	
+	/*int toggle;
 	int len;
 	int start;
 	int i;
@@ -51,7 +79,7 @@ char **ft_strsplit(char const *s, char c)
 		i++;
 	}
 	result++;
-	**result = '\0';
+	**result = '\0'; */
 	return (result);
 }
 
@@ -64,9 +92,9 @@ int main() {
 	//int j = 0;
 
 	//char **res;
-	char *foo = "Hello world.";
+	char foo[] = "Hello world This string should split up.";
 
-	char d = 'o';
+	char d = ' ';
 
 	char **res = ft_strsplit(foo, d);
 	
