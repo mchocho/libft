@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 17:07:04 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/07 17:23:41 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/23 16:20:37 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
@@ -14,16 +14,9 @@
 
 void ft_memdel(void **ap)
 {
-	char **list;
-
-	list = (char**)ap;
-
-	while(**list)
-	{
-		free(*list);
-		list++;
-	}
-	**list = '\0';
+	if (ap != NULL && *ap != NULL)
+		free(*ap);
+	*ap = NULL;
 }
 
 #include <stdio.h>
