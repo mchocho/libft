@@ -6,8 +6,16 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/06/03 14:43:54 by mchocho          ###   ########.fr        #
+#    Updated: 2019/06/24 11:57:55 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.o
+
+CFLAGS = -Wall -Werror -Wextra
+
+CC = gcc
+
+SRC = 
+
+OBJECTS = 
