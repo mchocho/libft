@@ -14,18 +14,3 @@ int ft_isalnum(int c)
 {
 	return (c >= 48 && c <= 122);
 }
-
-#include <stdio.h>
-#include <ctype.h>
-
-int main() {
-	printf(" Testing ft_isalnum\n---------------------\n");
-
-	int foo = '0';
-
-	printf("Result should be: %d\n", isalnum(foo));
-
-	printf("Test returned result: %d\n", ft_isalnum(foo));
-
-	return 0;
-}

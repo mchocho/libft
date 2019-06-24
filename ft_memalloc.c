@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void *ft_memalloc(size_t size) {
 	char *mem;	
@@ -21,19 +21,4 @@ void *ft_memalloc(size_t size) {
 	*mem = 0;
 
 	return ((void *)mem);
-}
-
-#include <stdio.h>
-
-int main() {
-
-	printf(" Testing ft_memalloc\n------------------------\n");
-
-	char *str = (char *)ft_memalloc(30);
-
-	str = "Hello bitch! This is C programming";
-
-	printf("Result should be: %s\n", str);
-
-	return (0);
 }

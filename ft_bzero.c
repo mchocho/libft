@@ -9,7 +9,7 @@
 /*   Updated: 2019/05/21 14:17:06 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n) {
 	char *str;
@@ -25,24 +25,3 @@ void ft_bzero(void *s, size_t n) {
 	}
 	return;
 }
-
-#include <string.h>
-
-int main() {
-	printf(" Testing ft_bzero\n--------------------------------\n");
-
-	char foo[50] = "We think code rocks!";
-
-	char fubu[50] = "We think code rocks!";
-
-	bzero(foo + 5 , 6);
-
-	ft_bzero(fubu + 5, 6);
-
-	printf("Result should be: %s \n", foo);
-
-	printf("Test returned: %s \n", fubu);
-
-	return (0);
-}
-

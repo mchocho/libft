@@ -13,21 +13,3 @@
 int ft_isprint(int c) {
 	return (c == ' ' || (c >= 33 && c <= 126));
 }
-
-#include <stdio.h>
-#include <ctype.h>
-
-int main() {
-	printf(" Testing ft_isprint()\n---------------------\n");
-
-	printf("a --> %d\n", ft_isprint('a'));
-	printf("b --> %d\n", ft_isprint('b'));
-	printf("c --> %d\n", ft_isprint('c'));
-	//printf("% --> %d\n", ft_isprint('%'));
-	printf("? --> %d\n", ft_isprint('?'));
-	//printf("¥ --> %d\n", ft_isprint('¥'));
-	//printf("¶ --> %d\n", ft_isprint('¶'));
-	//printf("} --> %d\n", ft_isprint('}'));
-	printf("4 --> %d\n", ft_isprint(5));
-	printf("66 --> %d\n", ft_isprint(66));
-}

@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char *result;
 	int temp;
@@ -83,20 +82,4 @@ char *ft_itoa(int n)
 	result[len] = '\0';
 
 	return (result);
-}
-
-//#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_itoa.c\n----------------------\n");
-
-	int n = 2147483647;
-
-	//char str[50] = ft_itoa(n);
-
-	printf("Result before itoa: %d\n", n);
-
-	printf("Result after itoa: %s\n", ft_itoa(n));
-
-	return 0;
 }
