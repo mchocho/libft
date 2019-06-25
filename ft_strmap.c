@@ -9,7 +9,7 @@
 /*   Updated: 2019/06/23 18:18:31 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strmap(char const *s, char (*f)(char))
 {
@@ -36,22 +36,6 @@ char *ft_strmap(char const *s, char (*f)(char))
 		i++;
 	}
 	res[i] = '\0';
+
 	return (res);
-}
-
-#include <stdio.h>
-
-char sayhi(char foo) {
-	printf("Hi! Result of foo: %c\n", foo);
-	return foo;
-}
-
-int main() {
-	printf(" Testing ft_strmap.c\n--------------------\n");
-	
-	char foo[] = "Hello world!";
-
-	ft_strmap(foo, sayhi);
-
-	return 0;	
 }

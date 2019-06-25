@@ -9,8 +9,7 @@
 /*   Updated: 2019/06/23 18:14:04 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -27,29 +26,16 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while(ptr[i])
 		i++;
 	
-	if (!(res = (char *)malloc(sizeof(char) * i)))
+	if (!(res = (char *)malloc(sizeof(char) * i++)))
 		return (NULL);
+
+	i = 0;
 
 	while(ptr[i]) {
 		res[i] = f(i, ptr[i]);
 		i++;
 	}
+	res[i] = '\0';
 
 	return (res);
-}
-
-char sayhi(unsigned int i, char foo) {
-	printf("Index %d says Hi! Result is %c\n", i, foo);
-	return (foo);
-}
-
-int main() {
-	printf(" Testing ft_strmapi.c\n----------------------\n");
-
-	char foo[] = "Hello Bitch!";
-
-	ft_strmapi(foo, sayhi);
-
-	return 0;
-
 }

@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
@@ -34,21 +34,4 @@ char *ft_strjoin(char const *s1, char const *s2)
 	str[k] = '\0';
 
 	return (str);
-}
-
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_strjoin.c\n------------------------------------\n");
-
-	char *foo = "Hello";
-
-	char *fubu = " Bitch!";
-
-	char *bar = ft_strjoin(foo, fubu);
-
-	printf("Result returned: %s\n", bar);
-
-	return 0; 
-
 }

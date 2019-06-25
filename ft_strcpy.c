@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strcpy(char *dst, const char *src)
 {
@@ -25,22 +25,4 @@ char *ft_strcpy(char *dst, const char *src)
 	dst[i] = '\0';
 
 	return (dst);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-
-	printf(" Testing ft_strcpy\n-------------------------\n");
-
-	char *foo = "Hello bitch!";
-
-	char dst[60] = "";
-
-	ft_strcpy(dst, foo);
-
-	printf("Result after strcpy is: %s\n", dst);
-
-	return 0;
 }

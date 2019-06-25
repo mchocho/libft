@@ -23,17 +23,3 @@ int		ft_strequ(char const *s1, char const *s2)
 	}
 	return (1);
 }
-
-#include <stdio.h>
-
-int main() {
-	char *foo = "Hello Motherfucker";
-
-	char *fubu = "Hello Motherfucka";
-
-	int res = ft_strequ(foo, fubu);
-
-	printf("Result of ft_strequ: %d\n", res);
-
-	return 0;
-}

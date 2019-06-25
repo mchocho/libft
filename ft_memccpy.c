@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 {
@@ -30,28 +30,4 @@ void *ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 	cpy[i+1] = '\0';
 
 	return (dst);
-}
-
-#include <string.h>
-
-int main() {
-	char *foo = "Hello bitch";
-
-	char bar[50] = "";
-
-	char *dog = "Hello bitch";
-
-	char cat[50] = "";
-
-	memccpy(bar, foo, 'm', 15);
-
-	ft_memccpy(cat, dog, 'm', 15);
-
-	printf("  Testing ft_memccpy\n -------------------\n");
-
-	printf("Result should be %s\n", bar);
-
-	printf("Test returned %s\n", cat);
-
-	return 0;
 }

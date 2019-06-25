@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
 	size_t i;
@@ -29,33 +29,4 @@ size_t ft_strlcat(char *dst, const char *src, size_t dstsize) {
 
 	dst[i] = '\0';
 	return (i);
-}
-
-#include <string.h>
-
-int main() {
-	printf("  Testing ft_strlcat\n-------------------------\n");
-
-	//char foo[50] = "Hello";
-
-	//const char *fubu = " bitch!";
-
-		
-
-	//printf("Result should be: %d\n", (int)strlcat(foo, fubu, 15) );
-
-
-	char foo2[50] = "Hello ";
-
-	char *fubu2 = "bitch!";
-
-	//ft_strlcat(foo2, fubu2, 15);
-
-	printf("Test returned: %d\n", (int)ft_strlcat(foo2, fubu2, 15)/*foo2*/);
-
-	printf("Final string is: %s\n", foo2);
-
-
-	return (0);
-
 }

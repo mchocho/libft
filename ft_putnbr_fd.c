@@ -9,8 +9,7 @@
 /*   Updated: 2019/06/10 17:51:12 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void ft_putnbr_fd(int n, int fd)
 {
@@ -82,17 +81,4 @@ void ft_putnbr_fd(int n, int fd)
 			result++;
 		}
 	}
-}
-
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_putnbr_fd.c\n------------------------\n");
-
-
-	int foo = -2147483648;
-
-	ft_putnbr_fd(foo, 2);
-
-	return 0;
 }

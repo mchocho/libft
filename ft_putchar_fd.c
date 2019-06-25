@@ -9,22 +9,10 @@
 /*   Updated: 2019/06/10 14:51:39 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putchar_fd(char c, int fd) {
 	if (fd >= 0 && fd <= 2) {
 		write(fd, &c, 1);
 	}
-}
-
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_putchar_fd.c\n-----------------------\n");
-
-	char foo = 'T';
-
-	ft_putchar_fd(foo, 0);
-
-	return (0);
 }

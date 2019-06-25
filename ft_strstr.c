@@ -26,7 +26,7 @@ char *ft_strstr(const char *haystack, const char *needle)
 		{
 			k = i;
 			while (haystack[k] == needle[j]) {
-				if (needle[j++] == '\0') {
+				if (needle[j + 1] == '\0') {
 					return ((char *) haystack + i);
 				}
 				j++;
@@ -37,11 +37,11 @@ char *ft_strstr(const char *haystack, const char *needle)
 		k = -1;
 		i++;
 	}
-	if (!*needle) {
+
+	if (!*needle)
 		return ((char *)haystack);
-	} else if (i == 0) {
+	else if (i == 0)
 		return ((char *)(haystack + i));
-	} else {
+	else
 		return (NULL);
-	}
 }

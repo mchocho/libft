@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strdup(const char *s1) {
 	char *val;
@@ -28,22 +28,4 @@ char *ft_strdup(const char *s1) {
 	val[i] = '\0';
 
 	return (val);
-}
-
-#include <string.h>
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_strdup.c\n ---------------------\n");
-
-	char *foo = "Goodbye bitch!";
-
-	//char *fubu;
-	//char *bar;
-
-	printf("Result should be: %s\n", strdup(foo));
-
-	printf("Test returned: %s\n", ft_strdup(foo));
-
-	return 0;
 }

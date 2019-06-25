@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void *ft_memchr(const void *s, int c, size_t n) {
 	char *val;
@@ -26,20 +26,4 @@ void *ft_memchr(const void *s, int c, size_t n) {
 	}
 
 	return (NULL);
-}
-
-#include <string.h>
-
-int main() {
-	printf(" Testing ft_memchr\n ----------------------------\n");
-
-	char *foo = "Hello bitch!";
-
-	//char *bar = "Hello bitch!";
-
-	printf("Result should be: %s\n", memchr(foo, ' ', 15));
-
-	printf("Test returned: %s\n", ft_memchr(foo, ' ', 15));
-
-	return (0);
 }

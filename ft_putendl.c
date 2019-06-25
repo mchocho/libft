@@ -21,16 +21,3 @@ void ft_putendl(char const *s) {
 	}
 	write(1, &nl, 1);
 }
-
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_putendl.c\n------------------------------------\n");
-
-	char *str = "Hello bitch";
-
-	ft_putendl(str);
-
-	return 0;
-
-}

@@ -10,27 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putchar(const char c)
 {
 	write(1, &c, 1);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf(" Testing ft_putchar.c\n--------------------------------\n");
-
-	char *foo = "Hello bitch!";
-
-	while(*foo) {
-		ft_putchar(*foo);
-		ft_putchar('\n');
-		foo++;
-	}
-
-	return 0;
-
 }

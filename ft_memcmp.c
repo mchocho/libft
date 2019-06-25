@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_memcmp(const void *s1, const void *s2, size_t n) {
 	char *val1;
@@ -27,18 +27,4 @@ int ft_memcmp(const void *s1, const void *s2, size_t n) {
 		i++;
 	}
 	return (0);
-}
-
-#include <string.h>
-
-int main() {
-	printf("  Testing ft_memcmp\n ------------------------\n");
-
-	char *foo = "Hello :itch";
-
-	char *bar = "Hello bitch";
-
-	printf("Result should be: %d\n", memcmp((void *)foo, (void *)bar, 15));
-
-	printf("Test returned: %d\n", ft_memcmp((void *)foo, (void *)bar, 15));
 }

@@ -9,9 +9,9 @@
 /*   Updated: 2019/06/24 10:08:30 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
+#include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*str;
 	char 	*cpy;
@@ -42,19 +42,4 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 
 	dest[i] = '\0';
 	return (dest);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-	void *foo = (void *)"Hello world";
-
-	void *fubu = (void *)"Hello motherfucker";
-
-	printf("Result should be: %s\n", (char *)memmove(foo, fubu, 30));
-
-	printf("Result should be: %s\n", (char *)ft_memmove(foo, fubu, 30));
-
-	return 0;
 }

@@ -16,28 +16,10 @@ int ft_strlen(const char *s)
 
 	i = 0;
 
-	while (*s)
+	while(s[i])
 	{
-		s++;
 		i++;
 	}
+	
 	return (i);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-	printf(" Testing ft_strlen\n-------------------\n");
-
-	char *foo = "Hello Bitch!";
-
-	int ori_size = strlen(foo);
-	int size = ft_strlen(foo);
-
-	printf("Length of string foo is: %d\n", ori_size);
-
-	printf("Test returned length: %d\n", size);
-
-	return 0;
 }

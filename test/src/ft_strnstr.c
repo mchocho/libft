@@ -59,7 +59,7 @@ int main()
 
 	int i = 20;
 
-	printf("Result should be: %s\n", strnstr(foo, fubu, i));
+//	printf("Result should be: %s\n", strnstr(foo, fubu, i));
 
 	printf("Test returned: %s\n", ft_strnstr(foo, fubu, i));
 

@@ -9,9 +9,7 @@
 /*   Updated: 2019/06/10 17:41:07 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 void ft_putnbr(int n) {
 	char *result;
@@ -34,16 +32,7 @@ void ft_putnbr(int n) {
 			result++;
 		}
 		return;
-	} /*else if (n == 2147483647) {
-		result = (char *)malloc(sizeof(char) * 10);
-		if (!result) return;
-		result = "2147483647";
-		while (*result) {
-			write(1, result, 1);
-			result++;
-		}
-		return;
-	}*/
+	}
 	
 	
 
@@ -105,16 +94,4 @@ void ft_putnbr(int n) {
 		write(1, result, 1);
 		result++;
 	}
-}
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_putnbr.c\n----------------------\n");
-
-	int i = 2147483647;
-
-	ft_putnbr(i);
-
-	return 0;	
-
 }

@@ -1,8 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static char *ft_strtoken(char *str, const char sep)
+static const char *ft_strtoken(char *str, const char sep)
 {
+	/*
+	 *	Detects the char "sep" in the string "str" and replaces
+	 *	it with the '\0' termintator. ft_strtoken returns
+	 *	a pointer to the position it was pointing at during the
+	 *	intial stage of the function call.
+	 *
+	 */
+	char 
+
 	while(*str) {
 		if (*str == sep)
 			*str = sep;

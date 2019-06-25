@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strncat(char *s1, const char *s2, size_t n)
 {
@@ -32,21 +32,4 @@ char *ft_strncat(char *s1, const char *s2, size_t n)
 	s1[len] = '\0';
 
 	return (s1);
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main() {
-	printf(" Testing ft_strncat.c\n------------------------\n");
-
-	char foo[30] = "Hello ";
-
-	char fubu[30] = "bitch!";
-
-	printf("Result should be: %s\n", strncat(foo, fubu, 5));
-
-	printf("Test returned: %s\n", ft_strncat(foo, fubu, 5));
-
-	return (0);
 }

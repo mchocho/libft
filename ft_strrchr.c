@@ -26,12 +26,10 @@ char *ft_strrchr(const char *s, int c)
         }
         i++;
     }
-	if (c == '\0') {
+	if (c == '\0')
 		return ((char *)s + i);
-	} else if (j > -1) 
-	{
+	else if (j > -1) 
         return ((char *)s + j);
-    } else {
-		return (NULL);
-	}
+    else
+	   return (NULL);
 }

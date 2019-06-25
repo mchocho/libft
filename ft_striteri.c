@@ -27,20 +27,3 @@ void ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
-
-#include <stdio.h>
-
-void	saybye(unsigned int i, char *foo) {
-	printf("Index %d said Bye!: %s\n", i, foo);
-}
-
-int main() {
-	printf(" Testing ft_striteri.c\n-----------------------\n");
-
-	char foo[] = "Hello bitch!";
-
-	ft_striteri(foo, saybye);
-
-	return 0;
-}
-

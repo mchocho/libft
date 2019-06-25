@@ -9,7 +9,7 @@
 /*   Updated: 2019/06/10 15:19:48 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putendl_fd(char const *s, int fd) {
 	char nl = '\n';
@@ -21,17 +21,4 @@ void ft_putendl_fd(char const *s, int fd) {
 		}
 		write(fd, &nl, 1);
 	}
-}
-
-#include <stdio.h>
-
-int  main() {
-	printf(" Testing ft_putendl_fd.c\n-----------------------------\n");
-
-
-	char *foo = "Hello bitch!";
-
-	ft_putendl_fd(foo, 2);
-
-	return 0;
 }

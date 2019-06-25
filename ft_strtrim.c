@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int ft_isspace(int c)
 {
@@ -62,22 +62,4 @@ char *ft_strtrim(char const *s)
 	}
 
 	return (str);
-}
-
-#include <stdio.h>
-
-int main() {
-
-	printf(" Testing ft_strtrim.c\n----------------------\n");
-
-	char *foo = "\t\t\t\t\t           Hello                   Bitch!         ";
-
-	printf("Result before trim: %s\n", foo);
-
-	char *fubu = ft_strtrim(foo);
-
-	printf("Result after trim: %s\n", fubu);
-
-	return 0;
-
 }

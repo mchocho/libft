@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char *ft_strnew(size_t size)
 {
@@ -20,19 +20,4 @@ char *ft_strnew(size_t size)
 		str[size + 1] = '\0';
 		return (str);
 	}
-}
-
-#include <stdio.h>
-
-int main() {
-
-	printf(" Testing ft_strnew.c\n-------------------------------\n");
-
-	char *foo = "Hey girl! How u doin?";
-
-	foo = ft_strnew(6);
-
-	printf("Result returned: %s\n", foo);
-
-	return 0;
 }

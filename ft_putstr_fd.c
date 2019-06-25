@@ -9,8 +9,7 @@
 /*   Updated: 2019/06/10 15:07:39 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putstr_fd(char const *s, int fd) {
 	if (fd >= 0 && fd <= 2) {
@@ -19,17 +18,4 @@ void ft_putstr_fd(char const *s, int fd) {
 			s++;
 		}
 	}
-}
-
-#include <stdio.h>
-
-int main() {
-	printf(" Testing ft_putstr_fd.c\n-----------------------------\n");
-
-	char *str = "Hello bitch!";
-
-	ft_putstr_fd(str, 2);
-
-	return 0;
-
 }
