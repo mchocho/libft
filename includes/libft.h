@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 12:46:34 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/24 10:39:34 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/26 16:14:45 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ void	ft_putstr_fd(char const *s, int fd);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+<<<<<<< HEAD
 typedef struct			s_list
 {
 	void				*content;
@@ -76,4 +77,13 @@ typedef struct			s_list
 	struct s_list		*next;
 }						t_list
 
+=======
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+>>>>>>> 260d6eb78a197794a652087c01d47e0de5caa7c5
 #endif
