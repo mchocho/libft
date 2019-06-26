@@ -3,9 +3,9 @@ int main()
 
 	//Testing ft_bzero.c
 
-	printf(" Testing ft_bzero\n--------------------------------\n");
+	/*printf(" Testing ft_bzero\n--------------------------------\n");
 
-	char foo[50] = "We think code rocks!";
+	char foo[50] = "\We think code rocks!";
 
 	char fubu[50] = "We think code rocks!";
 
@@ -15,13 +15,13 @@ int main()
 
 	printf("Result should be: %s \n", foo);
 
-	printf("Test returned: %s \n", fubu);
+	printf("Test returned: %s \n", fubu);*/
 
 
 
 	//Testing ft_isalnum.c
 
-	printf(" Testing ft_isalnum\n---------------------\n");
+	/*printf(" Testing ft_isalnum\n---------------------\n");
 
 	int foo = '0';
 
@@ -43,12 +43,12 @@ int main()
 	printf("1 --> %d\n", ft_isalpha('1') );
 	printf("2 --> %d\n", ft_isalpha('2') );
 	printf("& --> %d\n", ft_isalpha('&') );
-	printf("( --> %d\n", ft_isalpha('(') );
+	printf("( --> %d\n", ft_isalpha('(') );*/
 
 
 	//Testing ft_isdigit.c
 
-	printf(" Testing ft_isdigit.c\n----------------------\n");
+	/*printf(" Testing ft_isdigit.c\n----------------------\n");
 
 	printf("1 --> %d\n", ft_isdigit('1'));
 	printf("2 --> %d\n", ft_isdigit('2'));
@@ -58,12 +58,12 @@ int main()
 	printf("a --> %d\n", ft_isdigit('a'));
 	printf("b --> %d\n", ft_isdigit('b'));
 	printf("& --> %d\n", ft_isdigit('&'));
-	printf("^ --> %d\n", ft_isdigit('^'));
+	printf("^ --> %d\n", ft_isdigit('^'));*/
 
 
 	//Testing ft_isprint.c
 
-	printf(" Testing ft_isprint()\n---------------------\n");
+	/*printf(" Testing ft_isprint()\n---------------------\n");
 
 	printf("a --> %d\n", ft_isprint('a'));
 	printf("b --> %d\n", ft_isprint('b'));
@@ -74,12 +74,12 @@ int main()
 	//printf("¶ --> %d\n", ft_isprint('¶'));
 	//printf("} --> %d\n", ft_isprint('}'));
 	printf("4 --> %d\n", ft_isprint(5));
-	printf("66 --> %d\n", ft_isprint(66));
+	printf("66 --> %d\n", ft_isprint(66));*/
 
 
 	//Testing ft_itoa.c
 
-	printf(" Testing ft_itoa.c\n----------------------\n");
+	/*printf(" Testing ft_itoa.c\n----------------------\n");
 
 	int n = 2147483647;
 
@@ -87,12 +87,12 @@ int main()
 
 	printf("Result before itoa: %d\n", n);
 
-	printf("Result after itoa: %s\n", ft_itoa(n));
+	printf("Result after itoa: %s\n", ft_itoa(n));*/
 
 
 	//Testing ft_memalloc.c
 
-	printf(" Testing ft_memalloc\n------------------------\n");
+	/*printf(" Testing ft_memalloc\n------------------------\n");
 
 	char *str = (char *)ft_memalloc(30);
 
@@ -116,10 +116,10 @@ int main()
 	ft_memccpy(cat, dog, 'm', 15);
 
 	printf("Result should be %s\n", bar);
-	printf("Test returned %s\n", cat);
+	printf("Test returned %s\n", cat);*/
 
 
-	printf(" Testing ft_memchr\n ----------------------------\n");
+	/*printf(" Testing ft_memchr\n ----------------------------\n");
 
 	char *foo = "Hello bitch!";
 
@@ -127,10 +127,13 @@ int main()
 
 	printf("Result should be: %s\n", memchr(foo, ' ', 15));
 
-	printf("Test returned: %s\n", ft_memchr(foo, ' ', 15));
+	printf("Test returned: %s\n", ft_memchr(foo, ' ', 15));*/
 
 
-	printf("  Testing ft_memcmp\n ------------------------\n");
+
+
+
+	/*printf("  Testing ft_memcmp\n ------------------------\n");
 
 	char *foo = "Hello :itch";
 
@@ -138,10 +141,14 @@ int main()
 
 	printf("Result should be: %d\n", memcmp((void *)foo, (void *)bar, 15));
 
-	printf("Test returned: %d\n", ft_memcmp((void *)foo, (void *)bar, 15));
+	printf("Test returned: %d\n", ft_memcmp((void *)foo, (void *)bar, 15));*/
 
 
-	printf("  Testing ft_memmove\n ------------------------\n");
+
+
+
+
+	/*printf("  Testing ft_memmove\n ------------------------\n");
 
 	void *foo = (void *)"Hello world";
 
@@ -149,10 +156,13 @@ int main()
 
 	printf("Result should be: %s\n", (char *)memmove(foo, fubu, 30));
 
-	printf("Result should be: %s\n", (char *)ft_memmove(foo, fubu, 30));
+	printf("Result should be: %s\n", (char *)ft_memmove(foo, fubu, 30));*/
 
 
-	printf(" Testing ft_memset\n-----------------------------\n");
+
+
+
+	/*printf(" Testing ft_memset\n-----------------------------\n");
 
 	char foo[50] = "Hello world";
 
@@ -164,10 +174,13 @@ int main()
 
 	printf("Result should be: %s\n", foo);
 
-	printf("Test returned: %s\n", fubu);
+	printf("Test returned: %s\n", fubu);*/
 
 
-	printf(" Testing ft_putchar.c\n--------------------------------\n");
+
+
+
+	/*printf(" Testing ft_putchar.c\n--------------------------------\n");
 
 	char *foo = "Hello bitch!";
 
@@ -175,70 +188,72 @@ int main()
 		ft_putchar(*foo);
 		ft_putchar('\n');
 		foo++;
-	}
+	}*/
 
 
-	printf(" Testing ft_putchar_fd.c\n-----------------------\n");
+
+
+	/*printf(" Testing ft_putchar_fd.c\n-----------------------\n");
 
 	char foo = 'T';
 
-	ft_putchar_fd(foo, 0);
+	ft_putchar_fd(foo, 0);*/
 
 
 
-	printf(" Testing ft_putendl.c\n------------------------------------\n");
+	/*printf(" Testing ft_putendl.c\n------------------------------------\n");
 
 	char *str = "Hello bitch";
 
-	ft_putendl(str);
+	ft_putendl(str);*/
 
 
 
 
-	printf(" Testing ft_putendl_fd.c\n-----------------------------\n");
+	/*printf(" Testing ft_putendl_fd.c\n-----------------------------\n");
 
 
 	char *foo = "Hello bitch!";
 
-	ft_putendl_fd(foo, 2);
+	ft_putendl_fd(foo, 2);*/
 
 
 
-	printf(" Testing ft_putnbr.c\n----------------------\n");
+	/*printf(" Testing ft_putnbr.c\n----------------------\n");
 
 	int i = 2147483647;
 
-	ft_putnbr(i);
+	ft_putnbr(i);*/
 
 
 
-	printf(" Testing ft_putnbr_fd.c\n------------------------\n");
+	/*printf(" Testing ft_putnbr_fd.c\n------------------------\n");
 
 
 	int foo = -2147483648;
 
-	ft_putnbr_fd(foo, 2);
+	ft_putnbr_fd(foo, 2);*/
 
 
 
-	printf(" Testing ft_putstr.c\n------------------------------\n");
+	/*printf(" Testing ft_putstr.c\n------------------------------\n");
 
 	char *str = "Hello world";
 
 	//printf("Result returned: ");
 
-	ft_putstr(str);
+	ft_putstr(str);*/
 
 
 
-	printf(" Testing ft_putstr_fd.c\n-----------------------------\n");
+	/*printf(" Testing ft_putstr_fd.c\n-----------------------------\n");
 
 	char *str = "Hello bitch!";
 
-	ft_putstr_fd(str, 2);
+	ft_putstr_fd(str, 2);*/
 
 
-	printf(" Testing ft_strcat\n--------------------\n");
+	/*printf(" Testing ft_strcat\n--------------------\n");
 
 	char *foo = "Even when ";
 
@@ -246,22 +261,22 @@ int main()
 
 	printf("Result should be: %s\n", strcat(foo, fubu));
 
-	printf("Test returned: %s\n", ft_strcat(foo, fubu));
+	printf("Test returned: %s\n", ft_strcat(foo, fubu));*/
 
 
 
-	printf(" Testing ft_strchr\n-------------------------------\n");
+	/*printf(" Testing ft_strchr\n-------------------------------\n");
 
 	char *foo = "Even when I lie";
 
 	printf("Result should be: %s\n", strchr(foo, 'I'));
 
 
-	printf("Result should be: %s\n", ft_strchr(foo, 'I'));
+	printf("Result should be: %s\n", ft_strchr(foo, 'I'));*/
 
 
 
-	printf(" Testing ft_strclr.c\n-------------------------------\n");
+	/*printf(" Testing ft_strclr.c\n-------------------------------\n");
 
 	char foo[50] = "Some long ass string";
 
@@ -269,10 +284,10 @@ int main()
 
 	ft_strclr(foo);
 
-	printf("Result returned: %s\n", foo);
+	printf("Result returned: %s\n", foo);*/
 
 
-	printf(" Testing ft_strcmp\n------------------\n");
+	/*printf(" Testing ft_strcmp\n------------------\n");
 
 	char *foo = "Hey girl!";
 
@@ -280,11 +295,11 @@ int main()
 	
 	printf("Result should be: %d\n", strcmp(foo, fubu));
 
-	printf("Test returned: %d\n", ft_strcmp(foo, fubu));
+	printf("Test returned: %d\n", ft_strcmp(foo, fubu));*/
 
 
 
-	printf(" Testing ft_strcpy\n-------------------------\n");
+	/*printf(" Testing ft_strcpy\n-------------------------\n");
 
 	char *foo = "Hello bitch!";
 
@@ -292,11 +307,11 @@ int main()
 
 	ft_strcpy(dst, foo);
 
-	printf("Result after strcpy is: %s\n", dst);
+	printf("Result after strcpy is: %s\n", dst);*/
 
 
 
-	printf(" Testing ft_strdel\n----------------------\n");
+	/*printf(" Testing ft_strdel\n----------------------\n");
 
 	char *str = "Hello world!";
 
@@ -306,11 +321,11 @@ int main()
 
 	ft_strdel(arr);
 
-	printf("Result after function call: %s\n", str);
+	printf("Result after function call: %s\n", str);*/
 
 
 
-	printf(" Testing ft_strdup.c\n ---------------------\n");
+	/*printf(" Testing ft_strdup.c\n ---------------------\n");
 
 	char *foo = "Goodbye bitch!";
 
@@ -319,21 +334,21 @@ int main()
 
 	printf("Result should be: %s\n", strdup(foo));
 
-	printf("Test returned: %s\n", ft_strdup(foo));
+	printf("Test returned: %s\n", ft_strdup(foo));*/
 
 
 
-	char *foo = "Hello Motherfucker";
+	/*char *foo = "Hello Motherfucker";
 
 	char *fubu = "Hello Motherfucka";
 
 	int res = ft_strequ(foo, fubu);
 
-	printf("Result of ft_strequ: %d\n", res);
+	printf("Result of ft_strequ: %d\n", res);*/
 
 
 
-	printf(" Testing ft_strjoin.c\n------------------------------------\n");
+	/*printf(" Testing ft_strjoin.c\n------------------------------------\n");
 
 	char *foo = "Hello";
 
@@ -341,12 +356,12 @@ int main()
 
 	char *bar = ft_strjoin(foo, fubu);
 
-	printf("Result returned: %s\n", bar);
+	printf("Result returned: %s\n", bar);*/
 
 
 
 
-	printf("  Testing ft_strlcat\n-------------------------\n");
+	/*printf("  Testing ft_strlcat\n-------------------------\n");
 
 	//char foo[50] = "Hello";
 
@@ -365,11 +380,11 @@ int main()
 
 	printf("Test returned: %d\n", (int)ft_strlcat(foo2, fubu2, 15)/*foo2*/);
 
-	printf("Final string is: %s\n", foo2);
+	printf("Final string is: %s\n", foo2);*/
 
 
 
-	printf(" Testing ft_strlen\n-------------------\n");
+	/*printf(" Testing ft_strlen\n-------------------\n");
 
 	char *foo = "Hello Bitch!";
 
@@ -378,11 +393,11 @@ int main()
 
 	printf("Length of string foo is: %d\n", ori_size);
 
-	printf("Test returned length: %d\n", size);
+	printf("Test returned length: %d\n", size);*/
 
 
 
-	printf(" Testing ft_strncmp\n--------------------------------\n");
+	/*printf(" Testing ft_strncmp\n--------------------------------\n");
 
 	char *foo = "Even when I lie";
 
@@ -392,11 +407,11 @@ int main()
 	
 	printf("Result should be: %d\n", strncmp(foo, fubu, 2));
 
-	printf("Test returned: %d\n", ft_strncmp(foo, fubu, 2));
+	printf("Test returned: %d\n", ft_strncmp(foo, fubu, 2));*/
 
 
 
-	printf(" Testing ft_strncpy\n--------------------\n");
+	/*printf(" Testing ft_strncpy\n--------------------\n");
 
 	char foo[10] = "Sam\tsung";
 
@@ -408,11 +423,11 @@ int main()
 
 	printf("Result should be: %s\n", strncpy(fubu, foo, i));
 
-	printf("Test returned: %s\n", ft_strncpy(fooboo, foo, i));
+	printf("Test returned: %s\n", ft_strncpy(fooboo, foo, i));*/
 
 
 
-	printf(" Testing ft_strnequ.c\n---------------------\n");
+	/*printf(" Testing ft_strnequ.c\n---------------------\n");
 
 	char *foo = "Hello motherfucker";
 
@@ -422,21 +437,21 @@ int main()
 
 	int result = ft_strnequ(foo, fubu, 20);
 
-	printf("Result returned: %d\n", result);
+	printf("Result returned: %d\n", result);*/
 
 
 
-	printf(" Testing ft_strnew.c\n-------------------------------\n");
+	/*printf(" Testing ft_strnew.c\n-------------------------------\n");
 
 	char *foo = "Hey girl! How u doin?";
 
 	foo = ft_strnew(6);
 
-	printf("Result returned: %s\n", foo);
+	printf("Result returned: %s\n", foo);*/
 
 
 
-	printf(" Testing ft_strtrim.c\n----------------------\n");
+	/*printf(" Testing ft_strtrim.c\n----------------------\n");
 
 	char *foo = "\t\t\t\t\t           Hello                   Bitch!         ";
 
@@ -444,13 +459,13 @@ int main()
 
 	char *fubu = ft_strtrim(foo);
 
-	printf("Result after trim: %s\n", fubu);
+	printf("Result after trim: %s\n", fubu);*/
 
 
 
 
 
-	printf(" Testing ft_tolower\n---------------\n");
+	/*printf(" Testing ft_tolower\n---------------\n");
 
 	printf("A ---> %c\n", ft_lower('A') );
 
@@ -467,12 +482,12 @@ int main()
 	printf("L ---> %c\n", ft_lower('L') );
 	printf("M ---> %c\n", ft_lower('M') );
 	printf("N ---> %c\n", ft_lower('N') );
-	printf("O ---> %c\n", ft_lower('O') );
+	printf("O ---> %c\n", ft_lower('O') );*/
 
 
 
 
-	printf(" Testing ft_toupper\n--------------------\n");
+	/*printf(" Testing ft_toupper\n--------------------\n");
 	printf("a -> %c\n", ft_toupper('a'));
 	printf("b -> %c\n", ft_toupper('b'));
 	printf("c -> %c\n", ft_toupper('c'));
@@ -485,7 +500,7 @@ int main()
 	printf("j -> %c\n", ft_toupper('j'));
 	printf("k -> %c\n", ft_toupper('k'));
 	printf("l -> %c\n", ft_toupper('l'));
-	printf("m -> %c\n", ft_toupper('m'));
+	printf("m -> %c\n", ft_toupper('m'));*/
 
 
 

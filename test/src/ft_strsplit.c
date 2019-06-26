@@ -1,23 +1,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-static const char *ft_strtoken(char *str, const char sep)
+static char *ft_strtoken(char *str, const char sep)
 {
 	/*
 	 *	Detects the char "sep" in the string "str" and replaces
 	 *	it with the '\0' termintator. ft_strtoken returns
-	 *	a pointer to the position it was pointing at during the
-	 *	intial stage of the function call.
+	 *	a pointer to the next token in the string or NULL
+	 *	if there are no more token
 	 *
 	 */
-	char 
 
 	while(*str) {
-		if (*str == sep)
-			*str = sep;
-		str++;
-	}
-	return (str);
+		if (*str == sep) {
+			*str = '\0';
+			str++;
+			return (str);
+		}
+	}			
+	return (NULL);
 }
 
 
@@ -33,13 +34,20 @@ char **ft_strsplit(char const *s, char c)
 	
 	while(s[len])
 		len++;
+	
+	if (!(value = (char *)malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	
+	value = (char *)s;
+	value[len] = '\0';
 
-	//str = (char *)s;
-	value = ft_strtoken((char *)s, c);
+	len = 0;
+	//value = ft_strtoken((char *)s, c);
 
 	while (value != NULL) {
 		printf("%s\n", value);
-		value = ft_strtoken(NULL, c);
+		value = ft_strtoken(value, c);
+		i++;
 	}
 	
 	/*int toggle;
