@@ -1,5 +1,13 @@
 #include <stdlib.h>
 
+/*
+ * Allocates (with malloc(3)) and returns a “fresh” sub string from
+ * the string given as argument. The substring begins at index
+ * start and is of sizelen. If start and len aren’t refer-ing to
+ * a valid substring, the behavior is undefined. If the allocation
+ * fails, the function returns NULL.
+ */
+
 char *ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char *result;
@@ -9,7 +17,7 @@ char *ft_strsub(char const *s, unsigned int start, size_t len)
 	i = start;
 	j = 0;
 
-	if (!s || (!(result = (char *)malloc(sizeof(char) * len + 1))))
+	if (!s[0] || (!(result = (char *)malloc(sizeof(char) * len + 1))))
 		return (NULL);
 
 	while(j < len && s[i]) {
