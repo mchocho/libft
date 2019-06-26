@@ -378,9 +378,9 @@ int main()
 
 	//ft_strlcat(foo2, fubu2, 15);
 
-	printf("Test returned: %d\n", (int)ft_strlcat(foo2, fubu2, 15)/*foo2*/);
+	//printf("Test returned: %d\n", (int)ft_strlcat(foo2, fubu2, 15)foo2);
 
-	printf("Final string is: %s\n", foo2);*/
+	//printf("Final string is: %s\n", foo2);
 
 
 
@@ -504,4 +504,32 @@ int main()
 
 
 
+
+	printf("Testing ft_strjoin.c\n-----------------------\n");
+	char *foo = "Hello";
+
+	char *fubu = " Bitch! This is we think code 2389y875984th84hgufiqrbegghrbguiepgbi;qleibgruiqluirbguibt4ui;b3ilubt4;l3b";
+
+	printf("String 1: %s\nString 2: %s\n", foo, fubu);
+
+	char *res = ft_strjoin(foo, fubu);
+
+	printf("Result returned: %s\n", res);
+
+
+	printf(" Testing ft_strncpy.c\n----------------------------\n");
+
+	char foo[] = "Motherf*cker";
+
+	char fubu[] = "Hello";
+
+	//char *res = strncpy(foo, fubu, 6);
+
+	char *test = ft_strncpy(foo, fubu, 5);
+
+	//printf("Result should be: %s\n", res);
+
+	printf("String 1: %s\n", foo);
+
+	printf("Test returned result: %s\n", test);	
 }

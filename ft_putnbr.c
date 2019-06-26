@@ -6,10 +6,14 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:52:16 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/10 17:41:07 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/26 18:50:13 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+/*
+ * Outputs the integer n to the standard output.
+ */
 
 void ft_putnbr(int n) {
 	char *result;

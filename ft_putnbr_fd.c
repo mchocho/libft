@@ -6,10 +6,14 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 16:09:08 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/10 17:51:12 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/26 18:51:09 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+
+/*
+ * Outputs the integer n to the file descriptor fd.
+ */
 
 void ft_putnbr_fd(int n, int fd)
 {

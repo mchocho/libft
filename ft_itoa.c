@@ -6,16 +6,16 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 15:03:02 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/05 16:33:12 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/26 18:40:38 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * Allocate (with malloc(3)) and returns a “fresh” string end-ing with’\0’
+ * Allocate (with malloc(3)) and returns a “fresh” string ending with ’\0’
  * representing the integer n given as argument. Negative numbers must be supported.
- * If the allocation fails ,the function returns NULL.
+ * If the allocation fails, the function returns NULL.
  */
 
 char	*ft_itoa(int n)
