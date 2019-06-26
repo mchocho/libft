@@ -6,12 +6,12 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 12:46:34 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/24 11:47:32 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/26 16:59:25 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef libft.h
-#define libft.h
+#ifndef LIBFT_H
+#define LIBFT_H
 
 #include <stdlib.h>
 #include <unistd.h>

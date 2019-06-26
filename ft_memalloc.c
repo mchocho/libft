@@ -6,11 +6,19 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 15:34:18 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/23 16:33:05 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/26 18:41:28 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+ * 	Allocates (with malloc(3)) and returns a “fresh” memory
+ * 	area. The memory allocated is initialized to 0. If the allocation
+ * 	fails, the function returns NULL.
+ */
+
+
 
 void *ft_memalloc(size_t size) {
 	char *mem;	
