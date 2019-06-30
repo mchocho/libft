@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/29 12:59:23 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/29 13:10:53 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/30 14:18:04 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,8 @@ t_list *ft_lstnew(void const *content, size_t content_size)
 	if (*content)
 	{
 		ft_memcpy(nlist->content, content, content_size);
-		nlist->content_size = content_sizel
+		nlist->content_size = content_size;
 	}
 
 	return (nlist);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf(" Testing ft_lstnew.c\n--------------------------\n");
-
-	size_t len = 10;
-
-	char *content = "Hey there world! Wink Wink.";
-
-	t_list node = ft_lstnew(content, len);
 }

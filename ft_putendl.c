@@ -6,13 +6,14 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:46:05 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/10 09:50:52 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/06/30 10:56:50 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_putendl(char const *s) {
+void	ft_putendl(char const *s)
+{
 	char nl = '\n';
 
 	while(*s) {
