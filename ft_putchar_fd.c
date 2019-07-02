@@ -9,13 +9,13 @@
 /*   Updated: 2019/06/26 18:48:49 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 /*
- * Outputs the char c to the file descriptor fd.
+** Outputs the char c to the file descriptor fd.
  */
 
-void ft_putchar_fd(char c, int fd) {
-	if (fd >= 0 && fd <= 2)
-		write(fd, &c, 1);
+void	ft_putchar_fd(char c, int fd) {
+	write(fd, &c, 1);
 }

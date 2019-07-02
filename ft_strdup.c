@@ -16,12 +16,15 @@ char *ft_strdup(const char *s1) {
 	char *val;
 	int i;
 
-	val = (char *)malloc(sizeof(*s1));
+	while(s1[i])
+		i++;
+
+	if (!(val = (char *)malloc(sizeof(i++))))
+		return (NULL);
+	
 	i = 0;
-
-	if (s1[i] == '\0') return (NULL);
-
-	while(s1[i] != '\0') {
+	while(s1[i])
+	{
 		val[i] = s1[i];
 		i++;
 	}

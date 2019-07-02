@@ -10,13 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * The isalnum() function tests for any character for which isalpha(3) or isdigit(3) is true.
- * The value of the argument must be representable as an unsigned char or the value of EOF.
- */
-
-
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
 	return (c >= 48 && c <= 122);
 }

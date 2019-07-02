@@ -19,23 +19,17 @@ char *ft_strmap(char const *s, char (*f)(char))
 
 	if (!*s || !f)
 		return (NULL);
-	
 	ptr = (char *)s;
 	i = 0;
-
 	while(ptr[i])
 		i++;
-
 	if (!(res = (char *)malloc(sizeof(char) * i++)))
 		return (NULL);
-
 	i = 0;
-
 	while(ptr[i]) {
 		res[i] = f(ptr[i]);
 		i++;
 	}
 	res[i] = '\0';
-
 	return (res);
 }

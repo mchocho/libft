@@ -24,35 +24,32 @@ char *ft_strtrim(char const *s)
 	int lchar;
 	int lspace;
 	int i;
-	int k;
 	int j;
 
 	fchar = -1;
 	lchar = -1;
 	lspace = 0;
 	i = 0;
-	k = 0;
 	j = 0;
 
-	while(s[i]) {
+	while(s[i])
+	{
 		if (!ft_isspace(s[i])) {
-			if(fchar == -1) fchar = i;
+			if(fchar == -1)
+				fchar = i;
 			lchar = i;
 			j = lspace + (j + 1);
 			lspace = 0;
-		} else lspace++;
-
+		} else
+			lspace++;
 		i++;
 	}
-
-	str = (char *)malloc(sizeof(char)*j);
-
-	if (!str) return (NULL);
-
+	if (!(str = (char *)malloc(sizeof(char)*j)))
+		return (NULL);
 	i = 0;
 	j = 0;
-
-	while(s[i]) {
+	while(s[i])
+	{
 		if (i >= fchar && i <= lchar)
 		{
 			str[j] = s[i];
@@ -60,6 +57,5 @@ char *ft_strtrim(char const *s)
 		}
 		i++;
 	}
-
 	return (str);
 }

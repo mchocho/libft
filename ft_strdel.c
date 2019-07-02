@@ -11,10 +11,8 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void ft_strdel(char **as) {
-	free((void *)as);
-	
-	**as = '\0';
-
-	return;
+void	ft_strdel(char **as) {
+	if (ap != NULL || *ap != NULL)
+		free(*as);
+	*as = NULL;
 }

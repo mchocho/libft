@@ -9,15 +9,15 @@
 /*   Updated: 2019/06/26 18:51:09 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 /*
- * Outputs the integer n to the file descriptor fd.
+** Outputs the integer n to the file descriptor fd.
  */
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd >= 0 && fd <= 2) {
 		char *result;
 		int temp;
 		int base;
@@ -84,5 +84,4 @@ void ft_putnbr_fd(int n, int fd)
 			write(fd, result, 1);
 			result++;
 		}
-	}
 }

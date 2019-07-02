@@ -9,21 +9,19 @@
 /*   Updated: 2019/06/26 18:33:56 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-/*
- *   The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does nothing.
- */
-
-
-void ft_bzero(void *s, size_t n) {
+void	ft_bzero(void *s, size_t n) 
+{
 	char *str;
 	size_t i;
 
 	str = (char *)s;
 	i = 0;
 
-	while(i < n) {
+	while(i < n)
+	{
 		*str = '\0';
 		i++;
 		str++;

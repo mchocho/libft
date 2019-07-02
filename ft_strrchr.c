@@ -1,35 +1,35 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 11:23:54 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/20 14:51:40 by mchocho          ###   ########.fr       */
-/*                                                                            */
+/*									      */
+/*							  :::	   ::::::::   */
+/*   ft_strrchr.c					:+:	 :+:	:+:   */
+/*						      +:+ +:+	      +:+     */
+/*   By: mchocho <marvin@42.fr>			    +#+  +:+	   +#+	      */
+/*						  +#+#+#+#+#+	+#+	      */
+/*   Created: 2019/05/20 11:23:54 by mchocho	       #+#    #+#	      */
+/*   Updated: 2019/05/20 14:51:40 by mchocho	      ###   ########.fr       */
+/*									      */
 /* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c) 
+char *ft_strrchr(const char *s, int c)
 {
-    int i;
-    int j;
+	int i;
+	int j;
 
-    i = 0;
-    j = -1;
-    
-    while(s[i] != '\0') 
+	i = 0;
+	j = -1;
+
+	while(s[i] != '\0')
 	{
-        if (s[i] == c) 
-		{
-            j = i;
-        }
-        i++;
+		if (s[i] == c)
+	    {
+		    j = i;
+	    }
+	    i++;
     }
 	if (c == '\0')
 		return ((char *)s + i);
-	else if (j > -1) 
-        return ((char *)s + j);
-    else
-	   return (NULL);
+	else if (j > -1)
+		return ((char *)s + j);
+	else
+		return (NULL);
 }

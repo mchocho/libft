@@ -14,10 +14,11 @@
 
 char *ft_strnew(size_t size)
 {
-	char *str = (char *)malloc(sizeof(char)*size);
-	if (!str) return (NULL);
-	else {
-		str[size + 1] = '\0';
-		return (str);
-	}
+	char *str; 
+
+	if (!(str = (char *)malloc(sizeof(char) * (size++))))
+		return (NULL);
+	
+	str[size] = '\0';
+	return (str);
 }

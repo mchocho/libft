@@ -21,14 +21,11 @@ static char *ft_strtoken(char *str, const char sep)
 	return (NULL);
 }
 
-
 char **ft_strsplit(char const *s, char c)
 {
 	char **result;
 	char *value;
-	//char *str;
 	int len;
-	//int k;
 
 	len = 0;
 	
@@ -42,13 +39,16 @@ char **ft_strsplit(char const *s, char c)
 	value[len] = '\0';
 
 	len = 0;
-	//value = ft_strtoken((char *)s, c);
 
 	while (value != NULL) {
 		printf("%s\n", value);
 		value = ft_strtoken(value, c);
 		i++;
 	}
+
+	value = (char *)s;
+
+	
 	
 	/*int toggle;
 	int len;

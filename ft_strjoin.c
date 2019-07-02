@@ -23,29 +23,25 @@ char *ft_strjoin(char const *s1, char const *s2)
 	j = 0;
 	k = 0;
 
-	while(s1[i])
+	while (s1[i])
 		i++;
 
-	while(s2[j])
+	while (s2[j])
 		j++;
 
-	if (!(str = (char *)malloc(sizeof(char) * (i + j))))
+	if (!(str = (char *)malloc(sizeof(char) * (i + j + 1))))
 		return (NULL);
-
 	while(k < i) {
 		str[k] = s1[k];
 		k++;
 	}
-
 	i = 0;
-
 	while (i < j) {
 		str[k] = s2[i];
 		k++;
 		i++;
 	}
-
 	str[k] = '\0';
-
+	
 	return (str);
 }

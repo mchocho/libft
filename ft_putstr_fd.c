@@ -9,13 +9,12 @@
 /*   Updated: 2019/06/10 15:07:39 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_putstr_fd(char const *s, int fd) {
-	if (fd >= 0 && fd <= 2) {
-		while(*s) {
-			write(fd, s, 1);
-			s++;
-		}
+void	ft_putstr_fd(char const *s, int fd) {
+	while(*s) {
+		write(fd, s, 1);
+		s++;
 	}
 }
