@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_iseven.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 14:24:04 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 14:34:44 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/01 14:47:20 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/01 14:56:29 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-/*
-** The memchr() function locates the first occurrence of c (converted to an
-** unsigned char) in string s.
-*/
-
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_iseven(int n)
 {
-	char	*val;
-	size_t	i;
+	return(n % 2 == 0);	
+}
 
-	val = (char *)s;
-	i = 0;
-	while (val[i] != '\0' && i < n)
-	{
-		if (val[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
-	}
-	return (NULL);
+#include <stdio.h>
+
+int main()
+{
+	printf(" Testing ft_iseven.c\n------------------------\n");
+
+	int n = -22;
+
+	char *res = (ft_iseven(n) == 1) ? "true" : "false";
+
+	printf("Is %d is even: %s\n", n, res);
+
+	return 0;
 }

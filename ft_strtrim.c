@@ -6,11 +6,20 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 14:24:12 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/04 14:46:36 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/03 18:19:46 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** Allocates (with malloc(3)) and returns a copy of the string given as
+** argument without whitespaces at the beginning or at the end of the
+** string. Will be considered as whitespaces the following characters ’ ’, 
+** ’\n’ and ’\t’. If s has no whites- paces at the beginning or at the end,
+** the function returns a copy of s. If the allocation fails the function
+** returns NULL.
+*/
 
 static int ft_isspace(int c)
 {
@@ -44,7 +53,7 @@ char *ft_strtrim(char const *s)
 			lspace++;
 		i++;
 	}
-	if (!(str = (char *)malloc(sizeof(char)*j)))
+	if (!(str = (char *)malloc(sizeof(char) * (j + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:39:14 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/30 10:55:13 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/03 14:46:51 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** Outputs the character c to the standard output.
- */
+*/
 
 void	ft_putchar(const char c)
 {

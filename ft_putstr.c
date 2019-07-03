@@ -6,17 +6,20 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 11:43:30 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/26 18:51:54 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/03 15:24:08 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 /*
 ** Outputs the string s to the standard output.
- */
+*/
 
-void	ft_putstr(char const *s) {
-	while(*s) {
+void	ft_putstr(char const *s)
+{
+	while (*s)
+	{
 		write(1, s, 1);
 		s++;
 	}

@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 15:03:02 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/30 15:19:48 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/03 14:01:07 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char		*ft_checkminmaxint(int n)
 	else if (n == 2147483647)
 		return ("2147483647");
 	else
-		return NULL;
+		return (NULL);
 }
 
 static char		*ft_inttochar(int n, char *result, int base, int temp)
@@ -42,11 +42,11 @@ static char		*ft_inttochar(int n, char *result, int base, int temp)
 
 char	*ft_itoa(int n)
 {
-	char *result;
-	int temp;
-	int base;
-	int i;
-	int len;
+	char	*result;
+	int		temp;
+	int		base;
+	int		i;
+	int		len;
 
 	base = 0;
 	result = 0;

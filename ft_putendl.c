@@ -6,17 +6,23 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 09:46:05 by mchocho           #+#    #+#             */
-/*   Updated: 2019/06/30 10:56:50 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/03 14:52:27 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** Outputs the string s to the standard output followed by a ’\n’.
+*/
+
 void	ft_putendl(char const *s)
 {
-	char nl = '\n';
+	char nl;
 
-	while(*s) {
+	nl = '\n';
+	while (*s)
+	{
 		write(1, s, 1);
 		s++;
 	}
