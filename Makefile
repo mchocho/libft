@@ -6,7 +6,7 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/06/30 15:20:12 by mchocho          ###   ########.fr        #
+#    Updated: 2019/07/04 17:59:41 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 HEADERS = libft.h
 
-CFLAGS = -Wall -Werror -Wextra -c
+FLAGS = -Wall -Werror -Wextra -c
 
 SRC = ./ft_memset.c\
 	./ft_bzero.c\
@@ -88,5 +88,11 @@ re: fclean all
 
 norm:
 	norminette -R CheckForbiddenSourceHeader $(FN)
+
+compile:
+	gcc $(FLAGS) $(FN)
+
+out:
+	./a.out
 
 .PHONY: re, clean, fclean, all
