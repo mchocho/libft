@@ -26,7 +26,25 @@ static int ft_isspace(int c)
 	return (c == ' ' || c == '\t' || c == '\n');
 }
 
-char *ft_strtrim(char const *s)
+static void	ft_trim(char *dst, char *src, int fchar, int lchar)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (src[i])
+	{
+		if (i >= fchar && i <= lchar)
+		{
+			dst[j] = src[i];
+			j++;
+		}
+		i++;
+	}
+}
+
+char	*ft_strtrim(char const *s)
 {
 	char *str;
 	int fchar;
@@ -55,7 +73,8 @@ char *ft_strtrim(char const *s)
 	}
 	if (!(str = (char *)malloc(sizeof(char) * (j + 1))))
 		return (NULL);
-	i = 0;
+	ft_trim(str, s, fchar, lchar);
+	/*i = 0;
 	j = 0;
 	while(s[i])
 	{
@@ -65,6 +84,6 @@ char *ft_strtrim(char const *s)
 			j++;
 		}
 		i++;
-	}
+	}*/
 	return (str);
 }

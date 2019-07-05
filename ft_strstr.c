@@ -10,36 +10,42 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /*
 ** The strstr() function locates the first occurrence of the null-terminated
 ** string needle in the null-terminated string haystack.
 */
 
+int	strsearch(const char *str, const char *search, int i)
+{
+	int j;
+
+	j = 0;
+	if (str[i] && str[i] == search[j])
+	{
+		while (str[i] == search[j])
+		{
+			if (search[j + 1] == '\0')
+				return (1);
+			j++;
+			i++;
+		}
+	}
+	return (0);
+}
+
 char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
-	int j;
-	int k;
 
 	i = 0;
-	j = 0;
 	if (!*needle)
 		return ((char *)haystack);
 	while (haystack[i] != '\0')
 	{
-		if (haystack[i] == needle[j])
-		{
-			k = i;
-			while (haystack[k] == needle[j])
-			{
-				if (needle[j + 1] == '\0')
-					return ((char *)haystack + i);
-				j++;
-				k++;
-			}
-		}
-		j = 0;
-		k = -1;
+		if (strsearch(haystack, needle, i))
+			return ((char *)haystack + i);
 		i++;
 	}
 	if (i == 0)

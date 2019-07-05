@@ -95,4 +95,7 @@ compile:
 out:
 	./a.out
 
+outw:
+	./a.exe
+
 .PHONY: re, clean, fclean, all

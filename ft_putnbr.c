@@ -15,86 +15,95 @@
 ** Outputs the integer n to the standard output.
 */
 
-void ft_putnbr(int n) {
-	char *result;
+/*static char             *ft_checkminmaxint(int n)
+{
+	if (n == -2147483648)
+		return ("-2147483648");
+	else if (n == 2147483647)
+		return ("2147483647");
+	else
+		return (NULL);
+}*/
+
+static char             *ft_inttochar(int n, char *result, int base)
+{
+	int len;
 	int temp;
-	int base;
-	//int len;
-	int i;
 
+	if (n == -2147483648)
+		return "-2147483648";
+	else if (n == 2147483647)
+		return "2147483647";
 	temp = n;
-	base = 0;
-	i = 0;
-
-	if (n == -2147483648 || n == 2147483647) {
-		temp = (n < 0) ? 11 : 10;
-		result = (char *)malloc(sizeof(char) * temp);
-		if (!result) return;
-		result = (n < 0) ? "-2147483648" : "2147483647";
-		while(*result) {
-			write(1, result, 1);
-			result++;
-		}
-		return;
-	}
-	
-	
-
-	//Check for value 0
-	if (n == 0) {
-		result = (char *)malloc(sizeof(char) * 2);
-		if (!result) return;
+	len = base;
+	if (n == 0)
+	{
 		result[0] = '0';
-		result[1] = '\0';
-		while(*result) {
-			write(1, result, 1);
-			result++;
-		}
-		//write(1, (&result), 1);
-		return;
+		len = 1;
 	}
-	
-	while(temp) {
-		base++;
-		temp = temp / 10;
-	}
-
-	//Reset temp variable
-	temp = n;
-
-	if (n < 0) {
-		temp = (temp) * -1;
-		//result[i] = '-';
-		//i++;
-		base++;
-	}
-
-	//printf("Provided number has a base: %d\n", base);
-
-	//Dynamically create string
-	result = (char *)malloc(sizeof(char) * base);
-	if (!result) return;
-
-	//len = base;
-
-	//Add null terminator
-	result[base] = '\0';
-
-	//Check for remaining digits
-	while(base--) {
-		/*if (n < 0 && base == 1) {
-			result[base - 1] = '-';
-			break;
-		}*/
-		result[base] = (temp % 10) + '0';
-		temp = temp / 10;
-		if (n < 0 && base == 1) {
-			result[base - 1] = '-';
-			break;
+	else
+	{
+		if (temp < 0)
+			temp = temp * -1;
+		while (base--)
+		{
+			result[base] = (temp % 10) + '0';
+			temp = temp / 10;
+			if (n < 0 && base == 1)
+				break ;
 		}
 	}
+	result[len] = '\0';
+	return (result);
+}
 
-	while(*result) {
+static int              ft_basesize(int n)
+{
+	int base;
+
+	if (n == 2147483647 || n == -2147483648)
+	{
+		if (n < 0)
+			return (11);
+		else
+			return (10);
+	}
+	base = -1;
+	if (n < 0)
+	{
+		base++;
+		n = n * -1;
+	}
+	while (n)
+	{
+		base++;
+		n = n / 10;
+	}
+	if (n == 0)
+		base++;
+	return (base);
+}
+
+static int              ft_addsign(char *res, int i)
+{
+	res[i] = '-';
+	return (i++);
+}
+
+void ft_putnbr(int n) {
+	char            *result;
+	int             base;
+	int             i;
+
+	i = 0;
+	base = ft_basesize(n);
+	if (!(result = (char *)malloc(sizeof(char) * (base + 1))))
+		return ;
+	if (n < 0)
+		i = ft_addsign(result, i);
+	result = ft_inttochar(n, result, base);
+	while (*result)
+	{
 		write(1, result, 1);
 		result++;
 	}

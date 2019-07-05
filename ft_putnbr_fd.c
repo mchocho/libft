@@ -16,72 +16,105 @@
 ** Outputs the integer n to the file descriptor fd.
 */
 
-void	ft_putnbr_fd(int n, int fd)
+static char             *ft_inttochar(int n, char *result, int base)
 {
-		char *result;
-		int temp;
-		int base;
-		int i;
+        int len;
+        int temp;
 
-		temp = n;
-		base = 0;
-		i = 0;
+        if (n == -2147483648)
+                return "-2147483648";
+        else if (n == 2147483647)
+                return "2147483647";
+        temp = n;
+        len = base;
+        if (n == 0)
+        {
+                result[0] = '0';
+                len = 1;
+        }
+        else
+        {
+                if (temp < 0)
+                        temp = temp * -1;
+                while (base--)
+                {
+                        result[base] = (temp % 10) + '0';
+                        temp = temp / 10;
+                        if (n < 0 && base == 1)
+                                break ;
+                }
+        }
+        result[len] = '\0';
+        return (result);
+}
 
-		//Check max int and min int
-		if (n == -2147483648 || n == 2147483647) {
-			temp = (n < 0) ? 11 : 10;
-			result = (char *)malloc(sizeof(char) * temp);
-			result = (n < 0) ? "-2147483648" : "2147483647";
-			while(*result) {
-				write(fd, result, 1);
-				result++;
-			}
-			return;
-		}
+static int              ft_basesize(int n)
+{
+        int base;
 
-		//Check if value is zero
-		if (n == 0) {
-			if (!(result = (char *)malloc(sizeof(char) * 2))) return;
-			//if (!str) return;
-			result[0] = '0';
-			result[1] = '\0';
-			while(*result) {
-				write(fd, result, 1);
-				result++;
-			}
-			return;
-		}
+        if (n == 2147483647 || n == -2147483648)
+        {
+                if (n < 0)
+                        return (11);
+                else
+                        return (10);
+        }
+        base = -1;
+        if (n < 0)
+        {
+                base++;
+                n = n * -1;
+        }
+        while (n)
+        {
+                base++;
+                n = n / 10;
+        }
+        if (n == 0)
+                base++;
+        return (base);
+}
 
-		//Detect base
-		while(temp) {
-			base++;
-			temp = temp / 10;
-		}
+static int              ft_addsign(char *res, int i)
+{
+        res[i] = '-';
+        return (i++);
+}
 
-		temp = n;
+void ft_putnbr_fd(int n, int fd) {
+        char            *result;
+        int             base;
+        int             i;
 
-		//Check for sign
-		if (n < 0) {
-			temp = temp * -1;
-			base++;
-		}
+        i = 0;
+        base = ft_basesize(n);
+        if (!(result = (char *)malloc(sizeof(char) * (base + 1))))
+                return ;
+        if (n < 0)
+                i = ft_addsign(result, i);
+        result = ft_inttochar(n, result, base);
+        while (*result)
+        {
+                write(fd, result, 1);
+                result++;
+        }
+}
 
-		//Create string buffer
-		if (!(result = (char *)malloc(sizeof(char) * (base + 1)))) return;
+#include <stdio.h>
 
-		result[base] = '\0';
-			
-		while(base--) {
-			result[base] = (temp % 10) + '0';
-			temp = temp / 10;
-			if (n < 0 && base == 1) {
-				result[base - 1] = '-';
-				break;
-			}
-		}
+int main()
+{
+	printf(" Testing ft_putnbr_fd.c\n--------------------------\n");
 
-		while(*result) {
-			write(fd, result, 1);
-			result++;
-		}
+	int n = 94564;
+
+	printf("Result should be: %d\n", n);
+
+	printf("Test returned: ");
+
+	ft_putnbr_fd(n, 1);
+
+	printf("\n");
+
+	return 0;
 }
