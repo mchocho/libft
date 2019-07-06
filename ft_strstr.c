@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 12:30:46 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 18:09:15 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/06 08:03:49 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** string needle in the null-terminated string haystack.
 */
 
-int	strsearch(const char *str, const char *search, int i)
+static int	strsearch(const char *str, const char *search, int i)
 {
 	int j;
 
