@@ -1,0 +1,6 @@
+a.out
+*.o
+a.out.dSYM/*
+gnl
+libft/libft.a
+*.DS_Store
