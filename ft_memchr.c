@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/22 14:24:04 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 14:34:44 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/07 14:59:06 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	val = (char *)s;
 	i = 0;
-	while (val[i] != '\0' && i < n)
+	while (val[i] && i < n)
 	{
 		if (val[i] == (unsigned char)c)
 			return ((void *)(s + i));

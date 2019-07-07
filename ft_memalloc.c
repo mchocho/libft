@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 15:34:18 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 14:31:03 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/07 14:05:37 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/07 14:41:11 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 /*
 ** Allocates (with malloc(3)) and returns a “fresh” memory area. The memory
-** allocated is initialized to 0. If the allocation fails, the function returns
-** NULL.
+** allocated is initialized to 0. If the alloca- tion fails, the function
+** returns NULL.
 */
 
 void	*ft_memalloc(size_t size)
 {
 	char *mem;
 
-	if (!(mem = (char *)malloc(sizeof(void) * size)))
+	if (!(mem = (void *)malloc(sizeof(void) * size)))
 		return (NULL);
 	*mem = 0;
-	return ((void *)mem);
+	return (mem);
 }

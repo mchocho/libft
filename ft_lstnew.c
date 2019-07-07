@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/29 12:59:23 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 14:22:37 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/07 13:43:00 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/07 14:02:50 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_list *ft_initlist()
+static void		*ft_initlist()
 {
-	t_list	*list;
+	t_list *list;
 
 	if (!(list = (t_list *)malloc(sizeof(t_list))))
 		return (NULL);
@@ -26,17 +26,15 @@ static t_list *ft_initlist()
 
 t_list *ft_lstnew(void const *content, size_t content_size)
 {
-	t_list nlist;
+	t_list *nlist;
+	
 	nlist = ft_initlist();
-
 	if (nlist == NULL)
 		return (NULL);
-
-	if (*content)
+	if (*(char *)content)
 	{
 		ft_memcpy(nlist->content, content, content_size);
 		nlist->content_size = content_size;
 	}
-
 	return (nlist);
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 14:57:38 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/06 12:54:53 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/07 15:08:41 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/07 15:10:25 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	str = (char *)b;
 	i = 0;
-	while (str[i] && i < len) 
+	while (str[i] && i < len)
 	{
 		str[i] = c;
 		i++;

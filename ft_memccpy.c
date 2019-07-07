@@ -5,12 +5,10 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 17:28:22 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 14:25:53 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/07 14:41:28 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/07 14:52:29 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 ** The memccpy() function copies bytes from string src to string dst.  If the

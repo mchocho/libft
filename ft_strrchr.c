@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/07 11:23:02 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/07 11:26:11 by mchocho          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
@@ -6,7 +18,7 @@
 **  by string (including the terminating null character).
 */
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int i;
 	int p;
@@ -21,7 +33,7 @@ char *ft_strrchr(const char *s, int c)
 	}
 	if (c == '\0')
 		return ((char *)(s + i));
-	if (i > -1)
+	else if (i > -1)
 		return ((char *)(s + p));
 	return (NULL);
 }
