@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 /*
 **  This function finds the last occurence of c
@@ -10,33 +9,19 @@
 char *ft_strrchr(const char *s, int c)
 {
 	int i;
-	
-	i = 0;
+	int p;
 
+	i = 0;
+	p = -1;
 	while (s[i])
-		i++;
-	if (c == '\0')
-		return ((char *)(s + i));
-	while (s[i - 1] && i > -1)
 	{
 		if (s[i] == c)
-			return ((char *)(s + i));
-		i--;
+			p = i;
+		i++;
 	}
+	if (c == '\0')
+		return ((char *)(s + i));
+	if (i > -1)
+		return ((char *)(s + p));
 	return (NULL);
-}
-
-#include <string.h>
-
-int main() {
-	printf(" Testing ft_strrch.c\n------------------------------\n");
-
-	char *str = "Hello Ya Biiiiiiich";
-
-	printf("Result should be: %s\n", strrchr(str, 'Y'));
-
-	printf("Test returned: %s\n", ft_strrchr(str, 'Y'));
-
-	return (0);
-
 }

@@ -80,7 +80,7 @@ int		ft_addsign(char *res, int i)
 
 char	*ft_itoa(int n)
 {
-	char	*result;
+	char		*result;
 	int		base;
 	int		i;
 	int		len;
