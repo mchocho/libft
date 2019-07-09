@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/06 07:56:24 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/06 08:08:32 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/09 16:47:56 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/09 17:00:02 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,27 @@
 ** used when portability is not a concern.
 */
 
-static int     ft_strsearch(const char *str, const char *search, int i, int len)
+static int	ft_strsearch(const char *str, const char *search, int i, int len)
 {
-        int j;
+	int j;
 
-        j = 0;
-        if (str[i] && str[i] == search[j])
-        {
-                while (i < len && str[i] == search[j])
-                {
-                        if (search[j + 1] == '\0')
-                                return (1);
-                        j++;
-                        i++;
-                }
-        }
-        return (0);
+	j = 0;
+	if (str[i] && str[i] == search[j])
+	{
+		while (i < len && str[i] == search[j])
+		{
+			if (search[j + 1] == '\0')
+				return (1);
+			j++;
+			i++;
+		}
+	}
+	return (0);
 }
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	if (!*needle)

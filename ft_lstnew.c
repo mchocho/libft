@@ -6,13 +6,13 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 13:43:00 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/07 14:02:50 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/09 18:17:26 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		*ft_initlist()
+static t_list		*ft_initlist(void)
 {
 	t_list *list;
 
@@ -24,10 +24,10 @@ static void		*ft_initlist()
 	return (list);
 }
 
-t_list *ft_lstnew(void const *content, size_t content_size)
+t_list				*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *nlist;
-	
+
 	nlist = ft_initlist();
 	if (nlist == NULL)
 		return (NULL);

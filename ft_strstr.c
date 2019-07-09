@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:30:46 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/06 08:03:49 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/09 17:08:11 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/09 17:11:35 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	strsearch(const char *str, const char *search, int i)
 	return (0);
 }
 
-char	*ft_strstr(const char *haystack, const char *needle)
+char		*ft_strstr(const char *haystack, const char *needle)
 {
 	int i;
 

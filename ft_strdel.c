@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 16:09:45 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 15:49:11 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/09 15:45:57 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/09 15:49:15 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	ft_strdel(char **as)
 {
-	if (ap != NULL || *ap != NULL)
+	if (as != NULL || *as != NULL)
 		free(*as);
 	*as = NULL;
 }

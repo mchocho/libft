@@ -5,17 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/26 17:21:21 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 15:47:08 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/09 14:40:12 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/09 14:42:20 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** The stpcpy() and strcpy() functions copy the string src to dst (including
-** the terminating `\0' character.)
-*/
 
 char	*ft_strcpy(char *dst, const char *src)
 {

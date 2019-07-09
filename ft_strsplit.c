@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/03 17:24:51 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/03 17:56:56 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/09 17:02:32 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/09 17:07:01 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	**ft_strsplit(char const *s, char c)
 	k = 0;
 	if (!*s || !c)
 		return (NULL);
-	if (!(str = (char **)malloc(sizeof(char*) * (ft_strlen(s) + 1))))
+	if (!(str = (char **)malloc(sizeof(char *) * (ft_strlen(s) + 1))))
 		return (NULL);
 	while (s[i])
 	{
