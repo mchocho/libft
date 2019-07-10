@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/10 16:26:28 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/10 16:28:05 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/10 16:00:39 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/10 16:01:40 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char			*ptr;
-	unsigned int	i;
+	char	*ptr;
+	size_t	i;
 
-	if (!*s || !f)
-		return ;
-	ptr = s;
+	if (!(ptr = (char *)malloc(sizeof(char) * (len + 1))) || s == NULL)
+		return (NULL);
 	i = 0;
-	while (*ptr)
+	while (i < len)
 	{
-		f(i, (char *)&(*ptr));
-		ptr++;
+		ptr[i] = s[start];
 		i++;
+		start++;
 	}
+	ptr[i] = '\0';
+	return (ptr);
 }

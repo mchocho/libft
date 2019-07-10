@@ -6,9 +6,11 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 14:41:28 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/07 14:52:29 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/10 17:52:05 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 ** The memccpy() function copies bytes from string src to string dst.  If the

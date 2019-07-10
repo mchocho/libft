@@ -6,7 +6,7 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/07/07 12:29:42 by mchocho          ###   ########.fr        #
+#    Updated: 2019/07/10 19:00:02 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,22 +69,22 @@ SRC = ./ft_memset.c\
 	./ft_putendl_fd.c\
 	./ft_putnbr_fd.c
 
-OBJECTS = $(SRCS:.c=.o)
+OBJECTS = $(SRC:.c=.o)
 
 all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(SRC) $(HEADERS)
-	ar rc $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJECTS)
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJECTS)
 
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re:	fclean all
 
 norm:
 	norminette $(FN)
