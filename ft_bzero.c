@@ -6,11 +6,16 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 12:37:53 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/10 18:12:36 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/11 14:30:45 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+** The bzero() function writes n zeroed bytes to the string s.  If n is zero,
+** bzero() does nothing.
+*/
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -19,9 +24,9 @@ void	ft_bzero(void *s, size_t n)
 
 	str = (char *)s;
 	i = 0;
-	while (str[i] && i < n)
+	while (n > 0 && i < n)
 	{
-		str[i] = '\0';
+		str[i] = 0;
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 13:41:51 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/07 13:41:58 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/11 11:11:51 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ char	*ft_inttochar(int n, char *result, int base)
 
 int		ft_basesize(int base, int n)
 {
+	if (base == -2147483648)
+		return (11);
 	if (n < 0)
 	{
 		base++;

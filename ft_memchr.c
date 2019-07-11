@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/07 14:59:06 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/11 16:52:21 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*val;
-	size_t	i;
+	unsigned char	*val;
+	size_t			i;
 
-	val = (char *)s;
+	val = (unsigned char *)s;
 	i = 0;
 	while (val[i] && i < n)
 	{
@@ -30,5 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return ((void *)(s + i));
 		i++;
 	}
+	if (c == '\0')
+		return ((void *)(s + i));
 	return (NULL);
 }

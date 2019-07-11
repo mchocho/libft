@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 14:41:28 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/10 17:52:05 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/11 15:34:57 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,20 +21,21 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	char	*cpy;
-	char	*val;
-	size_t	i;
+	unsigned char				*cpy;
+	unsigned char				*val;
+	size_t						i;
 
-	cpy = (char *)dst;
-	val = (char *)src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	cpy = (unsigned char *)dst;
+	val = (unsigned char *)src;
 	i = 0;
-	while (i < n && val[i])
+	while (n > 0 && i < n)
 	{
-		cpy[i] = val[i];
-		if (val[i] == (unsigned char)c)
-			break ;
+		if (val[i] == c)
+			return (cpy + (i + 1));
+		cpy[i] = (unsigned char)val[i];
 		i++;
 	}
-	cpy[i + 1] = '\0';
-	return (dst);
+	return (NULL);
 }

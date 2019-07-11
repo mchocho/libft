@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 16:31:23 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/10 16:31:47 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/11 14:12:43 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 ** function may be passed a locale directly.
 */
 
-int		ft_lower(int c)
+int		ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
