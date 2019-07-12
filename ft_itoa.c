@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 13:41:51 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/11 11:11:51 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/12 17:29:15 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,22 @@
 
 char	*ft_checkminmaxint(int n)
 {
-	if (n == -2147483648)
-		return ("-2147483648");
-	else if (n == 2147483647)
-		return ("2147483647");
-	return (NULL);
+	char	*res;
+	size_t	len;
+
+	if (n != 2147483647 || n != -2147483648)
+			return (NULL);
+	if (n < 0)
+		len = 11;
+	else
+		len = 10;
+	if (!(res = (char *)malloc(sizeof(char) * (len + 1))))
+			return (NULL);
+	if (n < 0)
+		res = "-2147483648";
+	else
+		res = "2147483647";
+	return (res);
 }
 
 char	*ft_inttochar(int n, char *result, int base)
@@ -83,8 +94,7 @@ char	*ft_itoa(int n)
 
 	base = -1;
 	i = 0;
-	if (n == 2147483647 || n == -2147483648)
-		return (ft_checkminmaxint(n));
+
 	base = ft_basesize(base, n);
 	if (!(result = (char *)malloc(sizeof(char) * (base + 1))))
 		return (NULL);
@@ -95,4 +105,18 @@ char	*ft_itoa(int n)
 	if (n != 0)
 		result[len] = '\0';
 	return (result);
+}
+
+#include <stdio.h>
+
+int main()
+{
+	printf(" Testing ft_itoa.c\n-------------------------\n");
+
+	int n = -2147483648;
+
+	printf("Result returned: %s\n", ft_itoa(n));
+
+	return 0;
+		
 }

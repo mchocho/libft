@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 16:47:56 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/09 17:00:02 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/12 08:34:51 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,5 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			return ((char *)haystack + i);
 		i++;
 	}
-	if (i == 0)
-		return ((char *)(haystack + i));
 	return (NULL);
 }

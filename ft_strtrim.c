@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 17:12:50 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/09 17:59:43 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/12 16:53:34 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char			*ft_strtrim(char const *s)
 	}
 	if (fchar == -1)
 		return (ft_strdup(""));
-	if (!(str = (char *)malloc(sizeof(char) * (lchar - fchar + 1))))
+	if (!(str = ft_strnew((size_t)(lchar - fchar + 1))))
 		return (NULL);
 	ft_trim(str, (char *)s, fchar, lchar);
 	return (str);

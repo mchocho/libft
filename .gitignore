@@ -1,6 +1,7 @@
-a.out
-a.exe
+*.out
+*.exe
 *.o
+*.gch
 a.out.dSYM/*
 gnl
 libft/libft.a

@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 14:05:37 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/07 14:41:11 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/12 15:44:13 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char *mem;
+	void *mem;
 
+	if (size == 0)
+		return (NULL);
 	if (!(mem = (void *)malloc(sizeof(void) * size)))
 		return (NULL);
-	*mem = 0;
+	ft_bzero(mem, size);
 	return (mem);
 }
