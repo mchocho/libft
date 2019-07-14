@@ -2,7 +2,8 @@
 *.exe
 *.o
 *.gch
+*.swp
 a.out.dSYM/*
 gnl
-libft/libft.a
+libft.a
 *.DS_Store

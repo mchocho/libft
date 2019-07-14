@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 13:41:51 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/12 17:29:15 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/14 02:34:52 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,18 @@
 char	*ft_checkminmaxint(int n)
 {
 	char	*res;
-	size_t	len;
+	int		len;
 
-	if (n != 2147483647 || n != -2147483648)
-			return (NULL);
 	if (n < 0)
+		len = 12;
+	else
 		len = 11;
-	else
-		len = 10;
-	if (!(res = (char *)malloc(sizeof(char) * (len + 1))))
-			return (NULL);
+	if (!(res = (char *)malloc(sizeof(char) * len)))
+		return (NULL);
 	if (n < 0)
-		res = "-2147483648";
+		res = "-2147483648\0";
 	else
-		res = "2147483647";
+		res = "2147483647\0";
 	return (res);
 }
 
@@ -62,8 +60,8 @@ char	*ft_inttochar(int n, char *result, int base)
 
 int		ft_basesize(int base, int n)
 {
-	if (base == -2147483648)
-		return (11);
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		base++;
@@ -74,8 +72,6 @@ int		ft_basesize(int base, int n)
 		base++;
 		n = n / 10;
 	}
-	if (n == 0)
-		base++;
 	return (base);
 }
 
@@ -92,9 +88,10 @@ char	*ft_itoa(int n)
 	int			i;
 	int			len;
 
-	base = -1;
+	base = 0;
 	i = 0;
-
+	if (n == 2147483647 || n == -2147483648)
+		return (ft_checkminmaxint(n));
 	base = ft_basesize(base, n);
 	if (!(result = (char *)malloc(sizeof(char) * (base + 1))))
 		return (NULL);
@@ -105,18 +102,4 @@ char	*ft_itoa(int n)
 	if (n != 0)
 		result[len] = '\0';
 	return (result);
-}
-
-#include <stdio.h>
-
-int main()
-{
-	printf(" Testing ft_itoa.c\n-------------------------\n");
-
-	int n = -2147483648;
-
-	printf("Result returned: %s\n", ft_itoa(n));
-
-	return 0;
-		
 }
