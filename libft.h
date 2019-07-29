@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/15 15:54:05 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/15 15:59:07 by mchocho          ###   ########.fr       */
+/*   Created: 2019/07/17 12:14:44 by mchocho           #+#    #+#             */
+/*   Updated: 2019/07/29 17:28:48 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -74,4 +75,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_isuppercase(char c);
+int					ft_islowercase(char c);
+int					ft_charindex(char c);
 #endif

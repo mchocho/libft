@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 16:47:56 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/15 15:58:08 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/07/15 16:22:48 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,12 @@ char		*ft_strnstr(const char *str, const char *sub, size_t len)
 	size_t i;
 
 	i = 0;
-	if (!*needle)
-		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	if (!*sub)
+		return ((char *)str);
+	while (str[i] != '\0' && i < len)
 	{
-		if (ft_strsearch(haystack, needle, i, len))
-			return ((char *)haystack + i);
+		if (ft_strsearch(str, sub, i, len))
+			return ((char *)str + i);
 		i++;
 	}
 	return (NULL);

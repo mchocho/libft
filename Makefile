@@ -6,7 +6,7 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/07/10 19:00:02 by mchocho          ###   ########.fr        #
+#    Updated: 2019/07/29 17:33:49 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,10 @@ SRC = ./ft_memset.c\
 	./ft_putchar_fd.c\
 	./ft_putstr_fd.c\
 	./ft_putendl_fd.c\
-	./ft_putnbr_fd.c
+	./ft_putnbr_fd.c\
+	./ft_isuppercase.c\
+	./ft_lowercase.c\
+	./ft_charindex.c
 
 OBJECTS = $(SRC:.c=.o)
 
@@ -75,11 +78,13 @@ all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(SRC) $(HEADERS)
-	ar rc $(NAME) $(OBJECTS)
+	ar rv $(NAME) $(OBJECTS)
 	ranlib $(NAME)
+	rm libft.h.gch
 
 clean:
 	rm -f $(OBJECTS)
+	rm libft.h.gch
 
 fclean: clean
 	rm -f $(NAME)
