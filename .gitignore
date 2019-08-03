@@ -1,0 +1,9 @@
+*.out
+*.exe
+*.o
+*.gch
+*.swp
+a.out.dSYM/*
+gnl
+libft.a
+*.DS_Store
