@@ -38,3 +38,15 @@ t_list			*ft_lstnew(void const *content, size_t content_size)
 	}
 	return (nlist);
 }
+
+int main()
+{
+	char *data = "This is our content";
+
+	t_list *list = ft_lstnew(data, 9);
+	
+	if (list)
+	{}
+
+	return 0;
+}
