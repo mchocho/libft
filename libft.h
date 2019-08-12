@@ -81,6 +81,7 @@ int					ft_islowercase(char c);
 int					ft_charindex(char c);
 int				ft_strichr(const char *s, int c);
 int				ft_strichrfromindex(const char *s, int c, unsigned int n);
+int				ft_stristr(const char s1, const char *s2);
 
 typedef struct		s_list
 {

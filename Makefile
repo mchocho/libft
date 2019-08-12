@@ -75,7 +75,8 @@ SRC = ./ft_memset.c\
 	./ft_lstiter.c\
 	./ft_isuppercase.c\
 	./ft_islowercase.c\
-	./ft_charindex.c
+	./ft_charindex.c\
+	./ft_stristr.c
 
 OBJECTS = $(SRC:.c=.o)
 
