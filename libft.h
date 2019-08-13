@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 12:14:44 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/29 17:28:48 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/08/13 18:51:30 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -79,17 +86,11 @@ char				*ft_boolstrU(int val);
 int					ft_isuppercase(char c);
 int					ft_islowercase(char c);
 int					ft_charindex(char c);
-int				ft_strichr(const char *s, int c);
-int				ft_strichrfromindex(const char *s, int c, unsigned int n);
-int				ft_stristr(const char s1, const char *s2);
-
-typedef struct		s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
-
-
+int					ft_strichr(const char *s, int c);
+int					ft_strichrfromindex(const char *s, int c, unsigned int n);
+int					ft_stristr(const char s1, const char *s2);
+int					ft_stristrfromindex(const char *s1, const char *s2, int i);
+char				*ft_strnewstr(const char *str);
+char				*ft_splicesubstr(char *str, char *splice);
 
 #endif
