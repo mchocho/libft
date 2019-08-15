@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 12:14:44 by mchocho           #+#    #+#             */
-/*   Updated: 2019/08/13 18:51:30 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/08/15 18:42:24 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,7 @@ int					ft_stristr(const char s1, const char *s2);
 int					ft_stristrfromindex(const char *s1, const char *s2, int i);
 char				*ft_strnewstr(const char *str);
 char				*ft_splicesubstr(char *str, char *splice);
+char				*ft_strndup(const char *s1, size_t n);
+
 
 #endif
