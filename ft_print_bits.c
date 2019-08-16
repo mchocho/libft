@@ -1,11 +1,24 @@
-#include <stdlib.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_bits.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/16 21:00:19 by mchocho           #+#    #+#             */
+/*   Updated: 2019/08/16 21:01:35 by mchocho          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
 void    print_bits(int octet)
 {
-    int z = 1;
-	int oct = (int)octet;
+    int z;
+	int oct;
+
+	z = 1;
+	oct = (int)octet;
 
 	z <<= 16;
     while (z > 0)
@@ -16,16 +29,4 @@ void    print_bits(int octet)
             write(1, "0", 1);
         z >>= 1;
     }
-}
-
-
-int main()
-{
-	printf("Printing bits\n");
-
-
-	//unsigned char foo = 128;
-	print_bits(500);
-
-	return 0;
 }
