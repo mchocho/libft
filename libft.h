@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 12:14:44 by mchocho           #+#    #+#             */
-/*   Updated: 2019/08/15 18:42:24 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/09/02 14:59:40 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int					ft_islowercase(char c);
 int					ft_charindex(char c);
 int					ft_strichr(const char *s, int c);
 int					ft_strichrfromindex(const char *s, int c, unsigned int n);
-int					ft_stristr(const char s1, const char *s2);
+int					ft_stristr(const char *s1, const char *s2);
 int					ft_stristrfromindex(const char *s1, const char *s2, int i);
 char				*ft_strnewstr(const char *str);
 char				*ft_splicesubstr(char *str, char *splice);

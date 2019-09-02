@@ -6,7 +6,7 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/08/15 18:42:48 by mchocho          ###   ########.fr        #
+#    Updated: 2019/09/02 15:07:42 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,9 +76,18 @@ SRC = ./ft_memset.c\
 	./ft_isuppercase.c\
 	./ft_islowercase.c\
 	./ft_charindex.c\
+	./ft_strichr.c\
+	./ft_strichrfromindex.c\
 	./ft_stristr.c\
+	./ft_stristrfromindex.c\
 	./ft_strnewstr.c\
-	./ft_strndup.c
+	./ft_strndup.c\
+	./ft_boolstr.c\
+	./ft_boolstrS.c\
+	./ft_boolstrU.c\
+	./ft_chrcmp.c\
+	./ft_splicesubstr.c\
+	./ft_strndup.c\
 
 OBJECTS = $(SRC:.c=.o)
 
