@@ -6,15 +6,15 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/09/02 15:07:42 by mchocho          ###   ########.fr        #
+#    Updated: 2019/09/02 15:48:05 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME	:= libft.a
 
-HEADERS = libft.h
+HEADERS	:= libft.h
 
-FLAGS = -Wall -Werror -Wextra -c
+FLAGS	:= -Wall -Werror -Wextra -c
 
 SRC = ./ft_memset.c\
 	./ft_bzero.c\
@@ -97,11 +97,11 @@ $(NAME):
 	gcc $(FLAGS) $(SRC) $(HEADERS)
 	ar rv $(NAME) $(OBJECTS)
 	ranlib $(NAME)
-	rm libft.h.gch
+	rm -f *.gch
 
 clean:
 	rm -f $(OBJECTS)
-	rm libft.h.gch
+	rm -f libft.h.gch
 
 fclean: clean
 	rm -f $(NAME)
