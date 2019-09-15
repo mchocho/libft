@@ -94,5 +94,6 @@ char				*ft_strnewstr(const char *str);
 char				*ft_splicesubstr(char *str, char *splice);
 char				*ft_strndup(const char *s1, size_t n);
 void				ft_putpaddedstr(char *str, size_t width);
+void				ft_strclean(char *str);
 
 #endif
