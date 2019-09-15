@@ -12,5 +12,5 @@
 
 int ft_isuppercase(char c)
 {
-	return (c >= 'A' && c <= 'Z');
+	return (c >= 65 && c <= 90);
 }

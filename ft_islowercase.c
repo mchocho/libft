@@ -12,5 +12,5 @@
 
 int ft_islowercase(char c)
 {
-	return (c >= 'a' && c <= 'z');
+	return (c >= 97 && c <= 122);
 }
