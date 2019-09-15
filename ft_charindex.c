@@ -18,6 +18,5 @@ int ft_charindex(char c)
 		return ((int)(c - 'A'));
 	else if (ft_islowercase(c))
 		return ((int)(c - 'a'));
-	else
-		return (c);
+	return (c);
 }
