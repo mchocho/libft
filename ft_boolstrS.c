@@ -6,14 +6,11 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 14:43:00 by mchocho           #+#    #+#             */
-/*   Updated: 2019/09/17 14:43:05 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/09/17 15:24:40 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_boolstrs(int val)
 {
-	if (val)
-		return ("True");
-	else
-		return ("False");
+	return ((val) ? "True" : "False");
 }
