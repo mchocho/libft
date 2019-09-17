@@ -6,11 +6,11 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/29 17:21:56 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/29 17:22:47 by mchocho          ###   ########.fr       */
+/*   Updated: 2019/09/17 15:11:22 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isuppercase(char c)
+int	ft_isuppercase(char c)
 {
 	return (c >= 65 && c <= 90);
 }

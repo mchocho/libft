@@ -6,7 +6,7 @@
 #    By: mchocho <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 14:43:27 by mchocho           #+#    #+#              #
-#    Updated: 2019/09/07 13:58:45 by mchocho          ###   ########.fr        #
+#    Updated: 2019/09/17 14:39:00 by mchocho          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,8 @@ SRC = ./ft_memset.c\
 	./ft_strnewstr.c\
 	./ft_strndup.c\
 	./ft_boolstr.c\
-	./ft_boolstrS.c\
-	./ft_boolstrU.c\
+	./ft_boolstrs.c\
+	./ft_boolstru.c\
 	./ft_chrcmp.c\
 	./ft_splicesubstr.c\
 	./ft_strndup.c\
