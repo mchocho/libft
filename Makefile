@@ -89,7 +89,8 @@ SRC = ./ft_memset.c\
 	./ft_splicesubstr.c\
 	./ft_strndup.c\
 	./ft_putpaddedstr.c\
-	./ft_strclean.c
+	./ft_strclean.c\
+	./ft_strcleandel.c
 
 OBJECTS = $(SRC:.c=.o)
 

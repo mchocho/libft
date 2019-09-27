@@ -1,8 +1,8 @@
 #include "libft.h"
 
-void ft_strclean(char *str)
+void ft_strclean(char **str)
 {
-	ft_strclr(str);
-	ft_strdel(&str);
+	ft_strclr(*str);
+	ft_strdel(&(*str));
 	return ;
 }
