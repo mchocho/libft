@@ -27,19 +27,22 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t i;
-	size_t len;
+	char	*dst;
+	char	*src;
+	size_t	i;
 
+	dst = s1;
+	src = (char *)s2;
 	i = 0;
-	len = 0;
-	while (s1[len])
-		len++;
-	while (i < n && s2[i])
+	while (*dst)
+		dst++;
+	while (i < n && *src)
 	{
-		s1[len] = s2[i];
+		*dst = *src;
+		dst++;
+		src++;
 		i++;
-		len++;
 	}
-	s1[len] = '\0';
+	*dst = '\0';
 	return (s1);
 }

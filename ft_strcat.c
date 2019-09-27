@@ -18,19 +18,19 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int j;
-
-	i = 0;
-	j = 0;
-	while (s1[i] != '\0')
-		i++;
-	while (s2[j] != '\0')
+	char *dst;
+	char *src;
+	
+	dst = s1;
+	src = (char *)s2;
+	while (*dst)
+		dst++;
+	while (*src)
 	{
-		s1[i] = s2[j];
-		i++;
-		j++;
+		*dst = *src;
+		dst++;
+		src++;
 	}
-	s1[i] = '\0';
+	*dst = '\0';
 	return (s1);
 }

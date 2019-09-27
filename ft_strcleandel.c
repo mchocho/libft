@@ -1,4 +1,4 @@
-#include "ft_ls.h"
+#include "libft.h"
 
 void	ft_strcleandel(char **str)
 {

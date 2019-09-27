@@ -88,10 +88,8 @@ int					ft_strichr(const char *s, int c);
 int					ft_strichrfromindex(const char *s, int c, unsigned int n);
 int					ft_stristr(const char *s1, const char *s2);
 int					ft_stristrfromindex(const char *s1, const char *s2, int i);
-char				*ft_splicesubstr(char *str, char *splice);
 char				*ft_strndup(const char *s1, size_t n);
 void				ft_putpaddedstr(char *str, size_t width);
-void				ft_strclean(char *str);
-char				*ft_concatbuffers(char *str, char *buffer);
+void				ft_strclean(char **str);
 
 #endif
