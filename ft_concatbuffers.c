@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_boolstrU.c                                      :+:      :+:    :+:   */
+/*   ft_concatbuffers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/29 17:42:02 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/29 17:42:44 by mchocho          ###   ########.fr       */
+/*   Created: 2019/09/17 15:15:02 by mchocho           #+#    #+#             */
+/*   Updated: 2019/09/17 15:16:19 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_boolstrU(int val)
+#include "libft.h"
+
+char	*ft_concatbuffers(char *str, char *buffer)
 {
-	if (val)
-		return ("TRUE");
-	else
-		return ("FALSE");
+	char *temp;
+
+	temp = ft_strjoin(str, buffer);
+	ft_strclean(str);
+	return (temp);
 }
