@@ -80,7 +80,6 @@ SRC = ./src/ft_memset.c\
 	./src/ft_strichrfromindex.c\
 	./src/ft_stristr.c\
 	./src/ft_stristrfromindex.c\
-	./src/ft_strnewstr.c\
 	./src/ft_strndup.c\
 	./src/ft_boolstr.c\
 	./src/ft_chrcmp.c\
@@ -96,14 +95,13 @@ all: $(NAME)
 
 $(NAME):
 	gcc $(FLAGS) $(SRC) $(HEADERS)
-	ar rv $(NAME) $(OBJECTS)
+	ar rv $(NAME) $(subst /includes/,/,$(OBJECTS))
 	ranlib $(NAME)
-	mv -rf *.o ./output
-	rm -f /includes/*.gch
+	mv -f ./*o ./output
+	rm -rf ./includes/*.gch
 
 clean:
-	#rm -f $(OBJECTS)
-	rm -f /includes/libft.h.gch
+	rm -f ./output/*o ./includes/libft.h.gch
 
 fclean: clean
 	rm -f $(NAME)
