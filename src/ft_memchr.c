@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** The memchr() function locates the first occurrence of c (converted to an
@@ -19,7 +19,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*val;
+	unsigned char		*val;
 	size_t			i;
 
 	val = (unsigned char *)s;

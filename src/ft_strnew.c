@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** Allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’.

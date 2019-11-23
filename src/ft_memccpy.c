@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** The memccpy() function copies bytes from string src to string dst.  If the
@@ -23,7 +23,7 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char				*cpy;
 	unsigned char				*val;
-	size_t						i;
+	size_t					i;
 
 	if (dst == NULL && src == NULL)
 		return (NULL);

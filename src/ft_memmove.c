@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** The memmove() function copies len bytes from string src to string dst.
@@ -35,11 +35,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		temp[i] = cpy[i];
 		i++;
 	}
+	temp[i] = '\0';
 	i = 0;
 	while (i < len && len > 0)
 	{
 		str[i] = temp[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

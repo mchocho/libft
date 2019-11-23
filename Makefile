@@ -12,7 +12,7 @@
 
 NAME	:= libft.a
 
-HEADERS	:= libft.h
+HEADERS	:= includes/libft.h
 
 FLAGS	:= -Wall -Werror -Wextra -c
 
@@ -98,11 +98,12 @@ $(NAME):
 	gcc $(FLAGS) $(SRC) $(HEADERS)
 	ar rv $(NAME) $(OBJECTS)
 	ranlib $(NAME)
-	rm -f *.gch
+	mv -rf *.o ./output
+	rm -f /includes/*.gch
 
 clean:
-	rm -f $(OBJECTS)
-	rm -f libft.h.gch
+	#rm -f $(OBJECTS)
+	rm -f /includes/libft.h.gch
 
 fclean: clean
 	rm -f $(NAME)

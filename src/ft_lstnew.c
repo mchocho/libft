@@ -10,27 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-static t_list	*ft_initlist(void)
-{
-	t_list	*list;
-
-	if (!(list = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	list->content = NULL;
-	list->content_size = 0;
-	list->next = NULL;
-	return (list);
-}
+#include "../includes/libft.h"
 
 t_list			*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *nlist;
 
-	nlist = ft_initlist();
-	if (nlist == NULL)
+	if (!(nlist = (t_list *)malloc(sizeof(t_list))))
 		return (NULL);
+	nlist->content = NULL;
+	nlist->content_size = 0;
+	nlist->next = NULL;
 	if (content != NULL)
 	{
 		ft_memcpy(nlist->content, content, content_size);

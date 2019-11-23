@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** Outputs the string s to the standard output followed by a ’\n’.
@@ -18,13 +18,10 @@
 
 void	ft_putendl(char const *s)
 {
-	char nl;
-
-	nl = '\n';
 	while (*s)
 	{
 		write(1, s, 1);
 		s++;
 	}
-	write(1, &nl, 1);
+	write(1, "\n", 1);
 }

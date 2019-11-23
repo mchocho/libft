@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** The stpncpy() and strncpy() functions copy at most len characters from
@@ -39,5 +39,6 @@ char	*ft_strncpy(char *dst, const char *src, size_t size)
 			dst[i] = '\0';
 		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
 }
