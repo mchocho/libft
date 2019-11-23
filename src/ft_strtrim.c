@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 /*
 ** Allocates (with malloc(3)) and returns a copy of the string given as
@@ -47,7 +47,7 @@ static void		ft_trim(char *dst, char *src, int fchar, int lchar)
 
 char			*ft_strtrim(char const *s)
 {
-	char	*str;
+	char		*str;
 	int		fchar;
 	int		lchar;
 	int		i;
@@ -65,7 +65,7 @@ char			*ft_strtrim(char const *s)
 		i++;
 	}
 	if (fchar == -1)
-		return (ft_strdup(""));
+		return ("\0");
 	if (!(str = ft_strnew((size_t)(lchar - fchar + 1))))
 		return (NULL);
 	ft_trim(str, (char *)s, fchar, lchar);
