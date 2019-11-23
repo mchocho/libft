@@ -10,25 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_checkminmaxint(int n)
-{
-	char	*res;
-	int		len;
-
-	if (n < 0)
-		len = 12;
-	else
-		len = 11;
-	if (!(res = (char *)malloc(sizeof(char) * len)))
-		return (NULL);
-	if (n < 0)
-		res = "-2147483648\0";
-	else
-		res = "2147483647\0";
-	return (res);
-}
+#include "../includes/libft.h"
 
 char	*ft_inttochar(int n, char *result, int base)
 {
@@ -83,7 +65,7 @@ int		ft_addsign(char *res, int i)
 
 char	*ft_itoa(int n)
 {
-	char		*result;
+	char			*result;
 	int			base;
 	int			i;
 	int			len;
@@ -91,7 +73,7 @@ char	*ft_itoa(int n)
 	base = 0;
 	i = 0;
 	if (n == 2147483647 || n == -2147483648)
-		return (ft_checkminmaxint(n));
+		return (n < 0) ? "-2147483648\0" : "2147483647\0";
 	base = ft_basesize(base, n);
 	if (!(result = (char *)malloc(sizeof(char) * (base + 1))))
 		return (NULL);
