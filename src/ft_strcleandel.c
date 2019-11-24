@@ -4,4 +4,5 @@ void	ft_strcleandel(char **str)
 {
 	ft_strclean(&(*str));
 	free(*str);
+	*str = NULL;
 }
