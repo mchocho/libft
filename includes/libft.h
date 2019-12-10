@@ -91,5 +91,6 @@ char				*ft_strndup(const char *s1, size_t n);
 void				ft_putpaddedstr(char *str, size_t width);
 void				ft_strclean(char **str);
 void				ft_strcleandel(char **str);
+int				ft_strcmpi(const char *s1, const char *s2);
 
 #endif

@@ -86,7 +86,8 @@ SRC = ./src/ft_memset.c\
 	./src/ft_strndup.c\
 	./src/ft_putpaddedstr.c\
 	./src/ft_strclean.c\
-	./src/ft_strcleandel.c
+	./src/ft_strcleandel.c\
+	./src/ft_strcmpi.c
 
 TEMP = $(subst /src/,/includes/,$(SRC))
 OBJECTS = $(TEMP:.c=.o)
