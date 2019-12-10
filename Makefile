@@ -98,6 +98,8 @@ $(NAME):
 	gcc $(FLAGS) $(SRC) $(HEADERS)
 	ar rv $(NAME) $(subst /includes/,/,$(OBJECTS))
 	ranlib $(NAME)
+	rm -rf ./output
+	mkdir ./output
 	mv -f ./*o ./output
 	rm -rf ./includes/*.gch
 
