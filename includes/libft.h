@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 12:46:34 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/26 13:42:22 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/19 15:34:53 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 # include <stdlib.h>
 # include <unistd.h>
+#define MAX_SIZE 2147483647 / (1024 * 4)
 
 typedef struct			s_list
 {
@@ -21,6 +22,20 @@ typedef struct			s_list
 	size_t			content_size;
 	struct s_list		*next;
 }				t_list;
+
+typedef struct s_line {
+        char *str;
+        size_t length;
+        struct s_line *next;
+}       t_line;
+
+typedef struct _linkedlist {
+        struct s_line *next;
+        struct s_line *head;
+        struct s_line *tail;
+        struct s_line *current;
+
+}       l_list;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -92,5 +107,9 @@ void				ft_putpaddedstr(char *str, size_t width);
 void				ft_strclean(char **str);
 void				ft_strcleandel(char **str);
 int				ft_strcmpi(const char *s1, const char *s2);
+void			ft_concatstr(char **dst, const char *src);
+void			ft_initlist(l_list **list);
+void			ft_addtail(l_list **list, char *str, size_t length);
+void			ft_cleanher(l_list **list, int all);
 
 #endif
