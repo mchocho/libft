@@ -91,7 +91,8 @@ SRC = ./src/ft_memset.c\
 	./src/ft_concatstr.c\
 	./src/ft_initlist.c\
 	./src/ft_addtail.c\
-	./src/ft_cleanher.c
+	./src/ft_cleanher.c\
+	./src/ft_strsplice.c
 
 TEMP = $(subst /src/,/includes/,$(SRC))
 OBJECTS = $(TEMP:.c=.o)

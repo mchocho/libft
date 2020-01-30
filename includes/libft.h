@@ -111,5 +111,6 @@ void			ft_concatstr(char **dst, const char *src);
 void			ft_initlist(l_list **list);
 void			ft_addtail(l_list **list, char *str, size_t length);
 void			ft_cleanher(l_list **list, int all);
+void			ft_strsplice(l_list **list, int i);
 
 #endif
