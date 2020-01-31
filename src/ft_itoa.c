@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 13:41:51 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/14 02:34:52 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:36:00 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		ft_addsign(char *res, int i)
 
 char	*ft_itoa(int n)
 {
-	char			*result;
+	char		*result;
 	int			base;
 	int			i;
 	int			len;

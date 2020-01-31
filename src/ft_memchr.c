@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/11 16:52:21 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:34:05 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char		*val;
+	unsigned char	*val;
 	size_t			i;
 
 	val = (unsigned char *)s;

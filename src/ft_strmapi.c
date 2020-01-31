@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 16:39:52 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/12 16:30:36 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:34:24 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int		i;
+	unsigned int	i;
 	char			*res;
 	char			*ptr;
 
