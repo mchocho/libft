@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_cleanher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2020/01/31 10:34:05 by mchocho          ###   ########.fr       */
+/*   Created: 2020/01/19 15:33:23 by mchocho           #+#    #+#             */
+/*   Updated: 2020/01/31 10:27:28 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-/*
-** The memchr() function locates the first occurrence of c (converted to an
-** unsigned char) in string s.
-*/
-
-void	*ft_memchr(const void *s, int c, size_t n)
+void		ft_cleanher(l_list **list, int all)
 {
-	unsigned char	*val;
-	size_t			i;
+	t_line	*next;
 
-	val = (unsigned char *)s;
-	i = 0;
-	while (val[i] && i < n)
+	if (*list == NULL)
+		return ;
+	(*list)->current = (*list)->head;
+	next = (*list)->current->next;
+	ft_strcleandel(&(*list)->current->str);
+	(*list)->current->length = 0;
+	(*list)->current->next = NULL;
+	free((*list)->current);
+	(*list)->head = next;
+	(*list)->current = (*list)->head;
+	if (all)
 	{
-		if (val[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
+		(*list)->tail = NULL;
+		free(*list);
+		*list = NULL;
 	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (NULL);
 }

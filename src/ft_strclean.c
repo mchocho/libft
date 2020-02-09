@@ -6,13 +6,13 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/17 14:36:38 by mchocho           #+#    #+#             */
-/*   Updated: 2019/09/17 14:36:43 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:32:39 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-void ft_strclean(char **str)
+void	ft_strclean(char **str)
 {
 	ft_strclr(*str);
 	ft_strdel(&(*str));

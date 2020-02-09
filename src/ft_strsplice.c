@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strsplice.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2020/01/31 10:34:05 by mchocho          ###   ########.fr       */
+/*   Created: 2020/01/31 10:33:25 by mchocho           #+#    #+#             */
+/*   Updated: 2020/01/31 10:33:45 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-/*
-** The memchr() function locates the first occurrence of c (converted to an
-** unsigned char) in string s.
-*/
-
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_strsplice(l_list **list, int i)
 {
-	unsigned char	*val;
-	size_t			i;
+	char	*str;
+	char	*temp;
+	int		length;
 
-	val = (unsigned char *)s;
-	i = 0;
-	while (val[i] && i < n)
-	{
-		if (val[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
-	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (NULL);
+	str = (*list)->current->str;
+	length = (*list)->current->length;
+	temp = ft_strsub(str, i, length - i);
+	ft_strcleandel(&str);
+	(*list)->current->str = temp;
+	(*list)->current->length = length - i;
+	return ;
 }

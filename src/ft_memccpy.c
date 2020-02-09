@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/07 14:41:28 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/14 02:47:43 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:31:06 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char				*cpy;
-	unsigned char				*val;
+	unsigned char			*cpy;
+	unsigned char			*val;
 	size_t					i;
 
 	if (dst == NULL && src == NULL)

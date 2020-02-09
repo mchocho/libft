@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_addtail.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2020/01/31 10:34:05 by mchocho          ###   ########.fr       */
+/*   Created: 2020/01/19 14:50:29 by mchocho           #+#    #+#             */
+/*   Updated: 2020/01/19 14:57:33 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-/*
-** The memchr() function locates the first occurrence of c (converted to an
-** unsigned char) in string s.
-*/
-
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_addtail(l_list **list, char *str, size_t length)
 {
-	unsigned char	*val;
-	size_t			i;
+	t_line *line;
 
-	val = (unsigned char *)s;
-	i = 0;
-	while (val[i] && i < n)
-	{
-		if (val[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
-	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (NULL);
+	if (*list == NULL || !((line) = (t_line *)malloc(sizeof(t_line))))
+		return ;
+	line->str = ft_strdup(str);
+	line->length = length;
+	line->next = NULL;
+	if ((*list)->head == NULL)
+		(*list)->head = line;
+	else
+		(*list)->tail->next = line;
+	(*list)->tail = line;
 }

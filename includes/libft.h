@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/26 12:46:34 by mchocho           #+#    #+#             */
-/*   Updated: 2019/05/26 13:42:22 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/19 15:34:53 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 #include <uuid/uuid.h>
 #define true 1
 #define false 0
-
+#define MAX_SIZE 2147483647 / (1024 * 4)
 
 typedef struct			s_list
 {
@@ -42,11 +42,26 @@ typedef struct          s_file {
 	struct  s_file  *next;
 }			t_file;
 
-typedef struct          _linkedlist {
+typedef struct          ls_linkedlist {
         t_file 		*head;
+	t_file		*next;
         t_file		*tail;
         t_file		*current;
-}               LinkedList;
+}              file_list;
+
+typedef struct s_line {
+        char *str;
+        size_t length;
+        struct s_line *next;
+}       t_line;
+
+typedef struct 		gnl_linkedlist {
+        struct s_line *next;
+        struct s_line *head;
+        struct s_line *tail;
+        struct s_line *current;
+
+}       	l_list;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -118,5 +133,10 @@ void				ft_putpaddedstr(char *str, size_t width);
 void				ft_strclean(char **str);
 void				ft_strcleandel(char **str);
 int				ft_strcmpi(const char *s1, const char *s2);
+void				ft_concatstr(char **dst, const char *src);
+void				ft_initlist(l_list **list);
+void				ft_addtail(l_list **list, char *str, size_t length);
+void				ft_cleanher(l_list **list, int all);
+void				ft_strsplice(l_list **list, int i);
 
 #endif

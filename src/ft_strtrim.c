@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 17:12:50 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/12 16:53:34 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:35:20 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int		ft_isspace(int c)
 
 static void		ft_trim(char *dst, char *src, int fchar, int lchar)
 {
-	int i;
-	int j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -47,7 +47,7 @@ static void		ft_trim(char *dst, char *src, int fchar, int lchar)
 
 char			*ft_strtrim(char const *s)
 {
-	char		*str;
+	char	*str;
 	int		fchar;
 	int		lchar;
 	int		i;

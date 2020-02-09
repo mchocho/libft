@@ -6,7 +6,7 @@
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/09 12:41:03 by mchocho           #+#    #+#             */
-/*   Updated: 2019/07/09 12:45:07 by mchocho          ###   ########.fr       */
+/*   Updated: 2020/01/31 10:31:42 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	char *dst;
-	char *src;
-	
+	char	*dst;
+	char	*src;
+
 	dst = s1;
 	src = (char *)s2;
 	while (*dst)

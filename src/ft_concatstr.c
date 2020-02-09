@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_concatstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2020/01/31 10:34:05 by mchocho          ###   ########.fr       */
+/*   Created: 2020/01/19 11:59:11 by mchocho           #+#    #+#             */
+/*   Updated: 2020/01/19 13:31:39 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+#define MAX_SIZE 2147483647 / (1024 * 4)
 
-/*
-** The memchr() function locates the first occurrence of c (converted to an
-** unsigned char) in string s.
-*/
-
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_concatstr(char **dst, const char *src)
 {
-	unsigned char	*val;
-	size_t			i;
+	char temp[MAX_SIZE];
 
-	val = (unsigned char *)s;
-	i = 0;
-	while (val[i] && i < n)
-	{
-		if (val[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
-	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (NULL);
+	ft_bzero(temp, 1);
+	ft_strcpy(temp, *dst);
+	ft_strcat(temp, src);
+	ft_strcleandel(dst);
+	*dst = ft_strdup(temp);
+	return ;
 }

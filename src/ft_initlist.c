@@ -1,36 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_initlist.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mchocho <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/07 14:54:35 by mchocho           #+#    #+#             */
-/*   Updated: 2020/01/31 10:34:05 by mchocho          ###   ########.fr       */
+/*   Created: 2020/01/19 14:22:52 by mchocho           #+#    #+#             */
+/*   Updated: 2020/01/19 14:36:30 by mchocho          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-/*
-** The memchr() function locates the first occurrence of c (converted to an
-** unsigned char) in string s.
-*/
-
-void	*ft_memchr(const void *s, int c, size_t n)
+void		ft_initlist(l_list **list)
 {
-	unsigned char	*val;
-	size_t			i;
-
-	val = (unsigned char *)s;
-	i = 0;
-	while (val[i] && i < n)
-	{
-		if (val[i] == (unsigned char)c)
-			return ((void *)(s + i));
-		i++;
-	}
-	if (c == '\0')
-		return ((void *)(s + i));
-	return (NULL);
+	if (*list == NULL)
+		return ;
+	(*list)->current = NULL;
+	(*list)->head = NULL;
+	(*list)->tail = NULL;
+	return ;
 }
