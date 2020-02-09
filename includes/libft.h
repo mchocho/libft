@@ -11,9 +11,23 @@
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
-# include <unistd.h>
+#define LIBFT_H
+#include <dirent.h>
+#include <grp.h>
+#include <pwd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/acl.h>
+#include <sys/errno.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <sys/xattr.h>
+#include <time.h>
+#include <unistd.h>
+#include <uuid/uuid.h>
+#define true 1
+#define false 0
+
 
 typedef struct			s_list
 {
@@ -21,6 +35,18 @@ typedef struct			s_list
 	size_t			content_size;
 	struct s_list		*next;
 }				t_list;
+
+typedef struct          s_file {
+        char            *filename;
+	struct  stat    file_status;
+	struct  s_file  *next;
+}			t_file;
+
+typedef struct          _linkedlist {
+        t_file 		*head;
+        t_file		*tail;
+        t_file		*current;
+}               LinkedList;
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
